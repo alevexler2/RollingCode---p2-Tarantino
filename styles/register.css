@@ -1,0 +1,46 @@
+@font-face{
+    font-family: "Another Danger";
+    src: url(./fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
+}
+@font-face{
+    font-family: "Mulish 700";
+    src: url(./fonts/Mulish-Bold.ttf); 
+}
+@font-face{
+    font-family: "Mulish 500";
+    src: url(./fonts/Mulish-SemiBold.ttf);
+}
+@font-face{
+    font-family: "Mulish 200";
+    src: url(./fonts/Mulish-ExtraLightItalic.ttf);
+}
+body{
+background-image: url(./img/fondo.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.registro{
+    height: 100vh;
+    background: rgb(148,18,5);
+    background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
+    background-size: cover;
+}
+.logo-tarantino{
+    font-family:"Another Danger";
+    font-size: calc(1.5rem + 10vw);
+}
+.text-registro{
+    font-family: "Mulish 700";
+}
+.casilla-registro{
+    font-family:"Mulish 200";
+    border:#E6E7E9 ;
+}
+.boton-register{
+ background-color:#D94711 ;
+border:#D94711;
+color: #E6E7E9;
+border-radius: 5px;
+font-family: "Mulish 500";
+}
