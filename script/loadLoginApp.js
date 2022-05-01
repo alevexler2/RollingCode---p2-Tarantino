@@ -1,4 +1,4 @@
-const loginContainer = document.querySelector("#loginContainer");
+const loadLogin = document.querySelector("#loadLogin");
 setTimeout(() => {
-    loginContainer.innerHTML = "load";
+    window.location = "https://www.google.com";
   }, 5000);
