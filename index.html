@@ -9,8 +9,9 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-  <section id="loginContainer">
-    <div class="d-flex justify-content-center align-items-center container mb-0">
+  <section class="loginContainer" id="loginContainer">
+    <div class="d-flex justify-content-center align-items-center container mb-0 flex-column">
+      <h1 class="text-white d-flex justify-content-center align-items-end logoStyle">Tarantino</h1>
       <form>
         <div class="mb-3">
           <input type="email" class="form-control" id="inputUser" placeholder="Usuario">
@@ -18,8 +19,7 @@
         <div class="mb-3">
           <input type="password" class="form-control" id="inputPass" placeholder="Contraseña" minlength="8" maxlength="15">
         </div>
-        <button type="button" class="btn btn-primary" id="btnLogin">INGRESAR</button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-target="#exampleModal">REGISTRO</button>
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-target="#exampleModal">REGISTRO</button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -37,8 +37,9 @@
               </div>
             </div>
           </div>
-        </div>  
+        </div>   -->
       </form>
+      <button type="button" class="btnUser m-0 text-center" id="btnLogin">INGRESAR</button>
     </div>    
   </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

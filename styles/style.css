@@ -1,7 +1,36 @@
-*{
-    background: #941205;
+@font-face {
+    font-family: 'Another Danger';
+    src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
+}
+
+body{
+    background-image: url(../img/6e958353b6e5688fe22917284e2c7755.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .container{
-    height: 100vh;
+  height: 100vh;
+}
+
+.loginContainer{
+  background: rgb(148,18,5);
+  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
+  height: 100vh;
+}
+
+.logoStyle{
+  font-family:'Another Danger';
+  font-size: calc(1.5rem + 10vw);
+  margin-bottom: 3rem;
+}
+
+.btnUser{
+  background-color: #d94711;
+  color: #e6e7e9;
+  border-radius: 3px;
+  margin: auto;
+  border: 0px;
+  padding: 4px 15px;
 }
