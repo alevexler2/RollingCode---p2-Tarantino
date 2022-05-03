@@ -11,7 +11,10 @@ setTimeout(() => {
         <input type="password" class="form-control inputStyle" id="inputPass" placeholder="Contraseña" required>
       </div>
     </form>
-    <button type="button" class="btnUser m-0 text-center" id="btnLogin">INGRESAR</button>
+    <div class="d-flex">
+      <button type="button" class="btnUser m-1 text-center" id="btnLogin">INGRESAR</button>
+      <button type="button" class="btnUser m-1 text-center" id="btnLogin">REGISTRO</button>
+    </div>
   </div>    
 </section>`;
 const indexContainer = document.querySelector("#loginContainer");
