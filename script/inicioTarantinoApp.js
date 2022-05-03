@@ -13,11 +13,10 @@ setTimeout(() => {
     </form>
     <div class="d-flex">
       <button type="button" class="btnUser m-1 text-center" id="btnLogin">INGRESAR</button>
-      <button type="button" class="btnUser m-1 text-center" id="btnLogin">REGISTRO</button>
+      <a href="./pages/register.html"><button type="button" class="btnUser m-1 text-center" id="btnLogin">REGISTRO</button></a>
     </div>
   </div>    
 </section>`;
-const indexContainer = document.querySelector("#loginContainer");
 const inputUser = document.querySelector("#inputUser");
 const inputPass = document.querySelector("#inputPass");
 const btnLogin = document.querySelector("#btnLogin");
