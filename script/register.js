@@ -1,6 +1,8 @@
-const validarContraseña = (form)=> {
+const btn = document.querySelector("#button");
+btn.addEventListener("click", (form)=> {
     console.log(form)
     contraseña !== revalidar? respuesta.innerHTML = "Las contraseñas deben coincidir": "";
+}
 //     let xhr = new XMLHttpRequest();
 // xhr.open("POST", "https://62700e4fe1c7aec428ee89de.mockapi.io/api/v1/register");
 
@@ -17,6 +19,6 @@ const validarContraseña = (form)=> {
 //         "id": "1"
 //        },
 // }`;
-     };
+     
 
 

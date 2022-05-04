@@ -1,7 +1,7 @@
 const bgTarantino = document.querySelector(".bgTarantino");
 setTimeout(() => {
-  bgTarantino.innerHTML = `  <section class="container animate__animated animate__fadeIn" id="loginContainer">
-  <div class="d-flex justify-content-center align-items-center container mb-0 flex-column ">
+  bgTarantino.innerHTML = `<section class="container animate__animated animate__fadeIn" id="loginContainer">
+  <div class="d-flex justify-content-center align-items-center containerLogin mb-0 flex-column ">
     <h1 class="text-white d-flex justify-content-center align-items-end logoStyle">Tarantino</h1>
     <form>
       <div class="mb-3">
