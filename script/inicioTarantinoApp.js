@@ -12,8 +12,8 @@ setTimeout(() => {
       </div>
     </form>
     <div class="d-flex">
-      <button type="button" class="btnUser m-1 text-center" id="btnLogin">INGRESAR</button>
-      <a href="./pages/register.html"><button type="button" class="btnUser m-1 text-center" id="btnLogin">REGISTRO</button></a>
+      <button type="button" class="btn btn-primary m-1 btnTarantino" id="btnLogin">INGRESAR</button>
+      <a href="./pages/register.html"><button type="button" class="btn btn-primary m-1 btnTarantino" id="btnLogin">REGISTRO</button></a>
     </div>
   </div>    
 </section>`;

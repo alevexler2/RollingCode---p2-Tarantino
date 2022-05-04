@@ -12,16 +12,16 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../styles/register.css" />
+    <link rel="stylesheet" href="../styles/style.css">
   </head>
   <body>
     <div
-      class="container-fluid d-flex justify-content-center registro"
+      class="container-fluid d-flex justify-content-center bgTarantino"
       id="registro"
     >
       <div class="row my-5">
         <h1
-          class="text-white d-flex justify-content-center align-items-end logo-tarantino"
+          class="text-white d-flex justify-content-center align-items-end logoStyle"
         >
           TARANTINO
         </h1>
@@ -29,54 +29,12 @@
           <div class="row d-flex justify-content-center col-10 col-lg-5">
             <h2 class="text-center text-white text-registro">REGISTRO</h2>
             <form name="form">
-              <input
-                class="form-control my-2 casilla-registro"
-                type="text"
-                name="nombre"
-                id="nombre"
-                placeholder="nombre"
-                required
-              />
-              <input
-                class="form-control my-2 casilla-registro"
-                type="text"
-                name="apellido"
-                id="apellido"
-                placeholder="apellido"
-                required
-              />
-              <input
-                class="form-control my-2 casilla-registro"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="correo"
-                required
-              />
-              <input
-                class="form-control my-2 casilla-registro"
-                type="password"
-                name="contraseña"
-                id="contraseña"
-                placeholder="contraseña"
-                required
-              />
-              <input
-                class="form-control my-2 casilla-registro"
-                type="password"
-                name="revalidar"
-                id="revalidar"
-                placeholder="repetir contraseña"
-                required
-              />
-              <button
-                class="btn btn-primary d-flex justify-content-center align-items-end m-auto col-6 boton-register"
-                id="button"
-                type="button"
-                onclick="validarContraseña(this.form)"
-              >
-                CREAR
-              </button>
+              <input class="form-control my-2 casilla-registro" type="text" name="nombre" id="nombre" placeholder="nombre" required/>
+              <input class="form-control my-2 casilla-registro" type="text" name="apellido" id="apellido" placeholder="apellido" required/>
+              <input class="form-control my-2 casilla-registro" type="email" name="email" id="email" placeholder="correo" required/>
+              <input class="form-control my-2 casilla-registro" type="password" name="contraseña" id="contraseña" placeholder="contraseña" required/>
+              <input class="form-control my-2 casilla-registro" type="password" name="revalidar" id="revalidar" placeholder="repetir contraseña" required/>
+              <button class="btn btn-primary d-flex justify-content-center align-items-end m-auto col-6 btnTarantino" id="button" type="button" onclick="validarContraseña(this.form)">CREAR</button>
             </form>
             <div class="container respuesta d-block p-4" id="respuesta"></div>
           </div>

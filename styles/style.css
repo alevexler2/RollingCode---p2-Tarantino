@@ -13,24 +13,37 @@ body{
   background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
   height: 100vh;
 }
-.container{
-  height: 100vh;
-}
-.prueba{
-  height: 100%;
-  width: 200vw;
-}
 .logoStyle{
   font-family:'Another Danger';
   font-size: calc(1.5rem + 10vw);
   margin-bottom: 3rem;
 }
-.btnUser{
-  background-color: #d94711;
-  color: #e6e7e9;
-  border-radius: 3px;
-  margin: auto;
-  border: 0px;
-  padding: 4px 15px;
+.btnTarantino{
+  background-color:#D94711 ;
+  border:#D94711; 
+  color: #E6E7E9;
+  border-radius: 5px;
+  font-family: "Mulish 500";
+ }
+ .btn-primary:hover {
+  color: #fff;
+  background-color: #400202;
+  border-color: #400202;
+}
+/*estilos interface registro */
+.text-registro{
+  font-family: "Mulish 700";
+}
+.casilla-registro{
+  font-family:"Mulish 200";
+  border:#E6E7E9 ;
+}
+/*estilos interface load */
+.spinLoad{
+  height: 7vh;
+}
+/*estilo login */
+.container{
+  height: 100vh;
 }
 
