@@ -46,4 +46,10 @@ body{
 .containerLogin{
   height: 100vh;
 }
-
+/*estilo admin */
+.addMovieModal{
+  background-image:  linear-gradient(180deg, rgba(148, 18, 5, 0.8), rgb(0, 0, 0)), url(../img/6e958353b6e5688fe22917284e2c7755.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
