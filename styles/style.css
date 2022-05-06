@@ -16,19 +16,17 @@ body{
 .logoStyle{
   font-family:'Another Danger';
   font-size: calc(1.5rem + 10vw);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .btnTarantino{
   background-color:#D94711 ;
-  border:#D94711; 
   color: #E6E7E9;
   border-radius: 5px;
   font-family: "Mulish 500";
- }
- .btn-primary:hover {
+}
+.btnTarantino:hover {
   color: #fff;
   background-color: #400202;
-  border-color: #400202;
 }
 /*estilos interface registro */
 .text-registro{
@@ -36,14 +34,18 @@ body{
 }
 .casilla-registro{
   font-family:"Mulish 200";
-  border:#E6E7E9 ;
 }
 /*estilos interface load */
 .spinLoad{
-  height: 7vh;
+  height: calc(1.5rem + 10vw);
 }
 /*estilo login */
 .containerLogin{
   height: 100vh;
 }
-
+.txtGris{
+  color: rgb(150, 150, 150);
+}
+.cuentaCreada{
+  height: 10%;
+}
