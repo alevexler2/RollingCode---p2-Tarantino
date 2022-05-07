@@ -85,6 +85,8 @@ setTimeout(() => {
         response.forEach(element => {
           if (inputRec.value == element.correo) {
             return recRespuesta.innerHTML = `su contraseña es: <b>${element.contraseña}</b>`;
+          } else {
+            return recRespuesta.innerHTML = "No se ha encontrado el correo";
           }
         });
       });

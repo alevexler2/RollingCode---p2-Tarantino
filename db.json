@@ -15,6 +15,14 @@
       "contraseña": "123",
       "admin": false,
       "id": 2
+    },
+    {
+      "nombre": "789",
+      "apellido": "789",
+      "correo": "789@",
+      "contraseña": "789",
+      "admin": false,
+      "id": 3
     }
   ]
 }
