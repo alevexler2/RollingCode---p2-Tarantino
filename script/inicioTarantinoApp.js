@@ -47,7 +47,8 @@ setTimeout(() => {
           response.forEach(element => {
             if (inputUser.value == element.correo) {
               if (inputPass.value == element.contraseña) {
-                /* agregar validación para que guarde en el localStorage user y pass así recién pueda entrar a la home page */
+                window.localStorage.setItem("usuario", inputUser.value);
+                window.localStorage.setItem("contraseña", inputPass.value);
                 const loadLog = document.querySelector(".bgTarantino");
                 loadLog.innerHTML = 
                 `<div class="container-fluid d-flex justify-content-center animate__animated animate__fadeIn">
@@ -82,13 +83,18 @@ setTimeout(() => {
       fetch("http://localhost:3000/users/")
       .then((response) => response.json())
       .then((response) => {
-        response.forEach(element => {
-          if (inputRec.value == element.correo) {
-            return recRespuesta.innerHTML = `su contraseña es: <b>${element.contraseña}</b>`;
-          } else {
-            return recRespuesta.innerHTML = "No se ha encontrado el correo";
-          }
-        });
+        if (response.length != 0) {
+          response.find((element) => {
+            if (inputRec.value == element.correo) {
+              return recRespuesta.innerHTML = `su contraseña es: <b>${element.contraseña}</b>`;
+            }
+            else {
+              return recRespuesta.innerHTML = "No se ha encontrado el correo";
+            }
+          });
+        } else {
+          return recRespuesta.innerHTML = "No se ha encontrado el correo";          
+        }
       });
     } else {
       return recRespuesta.innerHTML = "Ingrese el correo que desea recuperar";      
