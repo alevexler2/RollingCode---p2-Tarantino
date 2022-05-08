@@ -1,0 +1,16 @@
+body{
+  background: rgb(148,18,5);
+}
+.btnTarantino{
+  background-color:#D94711 ;
+  border:#D94711; 
+  color: #E6E7E9;
+  border-radius: 5px;
+  font-family: "Mulish 500";
+ }
+ .btn-primary:hover {
+  color: #fff;
+  background-color: #400202;
+  border-color: #400202;
+}
+  
