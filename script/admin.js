@@ -23,7 +23,8 @@ btnPost.addEventListener("click",()=>{
         image: document.querySelector("#imageMovie").value,
         urlEspañol: document.querySelector("#urlEspañolMovie").value,
         urlIngles: document.querySelector("#urlInglesMovie").value,
-        response: document.querySelector("#checkbox").value
+        response: document.querySelector("#checkbox").value,
+        favorite: "false"
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -50,7 +51,7 @@ fetch(urlMovies)
             <td>${e.synopsis}</td>
             <td>${e.response}</td>
             <td>
-              <button type="button" class="btn btn-primary m-1 btnTarantino text-center" data-bs-toggle="modal" data-bs-target="#editMovieModal" id="${e.id}">Editar pelicula</button>
+              <button type="button" class="btn btn-primary m-1 btnTarantino text-center" data-bs-toggle="modal" data-bs-target="#editMovieModal" id="${e.id}" onclick="getIdBtn(id)">Editar pelicula</button>
               <div class="modal fade " id="editMovieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modalTarantino">
@@ -82,7 +83,7 @@ fetch(urlMovies)
             <td><button class="btn btn-primary m-1 btnTarantino text-center btnDelete" id="${e.id}" onclick="btnDelete(id)">Eliminar pelicula</button></td>
             <td>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="${e.id}" onclick="favoriteMovie(id)">
+                <input class="form-check-input " type="checkbox" id="300${e.id}" onclick="favoriteMovie(id)">
                 <label class="form-check-label" for="checkbox">Destacada</label>
               </div>
             </td>
@@ -94,23 +95,17 @@ fetch(urlMovies)
       alert("No se recibio respuesta del servidor")
     })
     
-function btnDelete(e){
-  fetch(`${urlMovies}/${e}`,{
-    method: "DELETE"
-  })
-    .then(()=>{
-      location.reload()
-    })
-    .catch(()=>{
-      alert("No se recibio respuesta del servidor")
-    })
-};
-
+let btnId;
+function getIdBtn(e){
+  btnId = e;
+  console.log(btnId);
+}
 function btnPut(e){
+  console.log(btnId);
   const editCheckbox = document.querySelector("#editCheckbox");
   document.querySelector("#editCheckbox").checked? editCheckbox.value = "publicada" : editCheckbox.value = "No publicada";
 
-  fetch(`${urlMovies}/${e}`,{
+  fetch(`${urlMovies}/${btnId}`,{
     method: "PUT",
     body: JSON.stringify({
       title: document.querySelector("#editTitleMovie").value,
@@ -137,6 +132,61 @@ function btnPut(e){
     location.reload()
   })
 }
+
+function btnDelete(e){
+  fetch(`${urlMovies}/${e}`,{
+    method: "DELETE"
+  })
+    .then(()=>{
+      location.reload()
+    })
+    .catch(()=>{
+      alert("No se recibio respuesta del servidor")
+    })
+};
+
+function favoriteMovie(e){
+  fetch(urlMovies)
+  .then(response=>response.json())
+  .then(data=>data.forEach(element=>{
+    fetch(`${urlMovies}/${element.id}`,{
+      method:"PATCH",
+      body: JSON.stringify({
+        favorite: "false"
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      }
+    })
+    .then(()=>{
+      fetch(`${urlMovies}/${parseInt(e)-3000}`,{
+        method:"PATCH",
+        body: JSON.stringify({
+          favorite: "true"
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+      .then(()=>{
+        location.reload()
+      })
+    })
+  }))
+}  
+
+window.addEventListener("load",()=>{
+  fetch(urlMovies)
+    .then(response => response.json())
+    .then(data=>data.forEach((e)=>{
+      e.favorite == "true"? document.getElementById(`300${e.id}`).setAttribute("checked",""):document.getElementById(`300${e.id}`).removeAttribute("checked","");
+      console.log(document.getElementById(`300${e.id}`));
+    }))
+})
+
+
+
+
 
 
 
