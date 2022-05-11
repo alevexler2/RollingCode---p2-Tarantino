@@ -1,5 +1,91 @@
+@font-face {
+  font-family: 'Another Danger';
+  src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
+}
 body{
   background: rgb(148,18,5);
+  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
+  height: 100vh;
+}
+table {
+  border: 1px solid #D94711;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #D94711;
+  border: 1px solid #D94711;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #D94711;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #D94711;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
 }
 .btnTarantino{
   background-color:#D94711 ;
@@ -12,5 +98,11 @@ body{
   color: #fff;
   background-color: #400202;
   border-color: #400202;
+}
+.logoStyle{
+  font-family:'Another Danger';
+  font-size: calc(0.5rem + 10vw);
+  color: #E6E7E9;
+  text-align: center;
 }
   

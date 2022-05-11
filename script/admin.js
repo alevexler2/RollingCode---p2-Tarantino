@@ -5,37 +5,45 @@ const checkbox = document.querySelector("#checkbox");
 
 btnPost.addEventListener("click",()=>{
   checkbox.checked? checkbox.value = "publicada" : checkbox.value = "No publicada";
-
-  fetch(urlMovies, {
-    method: "POST",
-      body: JSON.stringify({
-        title: document.querySelector("#titleMovie").value,
-        year: document.querySelector("#yearMovie").value,
-        rated: document.querySelector("#ratedMovie").value,
-        runtime: document.querySelector("#runtimeMovie").value,
-        director: document.querySelector("#directorMovie").value,
-        writer: document.querySelector("#writerMovie"),
-        actors: document.querySelector("#actorsMovie").value,
-        category: document.querySelector("#categoryMovie").value,
-        language: document.querySelector("#languageMovie").value,
-        synopsis: document.querySelector("#synopsisMovie").value,
-        imdbRating: document.querySelector("#imdbRatingMovie").value,
-        image: document.querySelector("#imageMovie").value,
-        urlEspañol: document.querySelector("#urlEspañolMovie").value,
-        urlIngles: document.querySelector("#urlInglesMovie").value,
-        response: document.querySelector("#checkbox").value,
-        favorite: "false"
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  })
-  .then(()=>{
-    location.reload()
-  })
-  .catch(()=>{
-    alert("No se recibio respuesta del servidor")
-  })
+if(document.querySelector("#titleMovie").value == "" || document.querySelector("#yearMovie").value == "" 
+  || document.querySelector("#ratedMovie").value == "" || document.querySelector("#runtimeMovie").value == "" 
+  || document.querySelector("#directorMovie").value == "" || document.querySelector("#writerMovie").value == "" 
+  || document.querySelector("#actorsMovie").value == "" || document.querySelector("#categoryMovie").value == "" 
+  || document.querySelector("#languageMovie").value == "" || document.querySelector("#synopsisMovie").value == ""
+  || document.querySelector("#imdbRatingMovie").value == "" || document.querySelector("#imageMovie").value == ""){
+    alert("los campos no pueden estar vacios")
+  } else {
+    fetch(urlMovies, {
+      method: "POST",
+        body: JSON.stringify({
+          title: document.querySelector("#titleMovie").value,
+          year: document.querySelector("#yearMovie").value,
+          rated: document.querySelector("#ratedMovie").value,
+          runtime: document.querySelector("#runtimeMovie").value,
+          director: document.querySelector("#directorMovie").value,
+          writer: document.querySelector("#writerMovie").value,
+          actors: document.querySelector("#actorsMovie").value,
+          category: document.querySelector("#categoryMovie").value,
+          language: document.querySelector("#languageMovie").value,
+          synopsis: document.querySelector("#synopsisMovie").value,
+          imdbRating: document.querySelector("#imdbRatingMovie").value,
+          image: document.querySelector("#imageMovie").value,
+          urlEspañol: document.querySelector("#urlEspañolMovie").value,
+          urlIngles: document.querySelector("#urlInglesMovie").value,
+          response: document.querySelector("#checkbox").value,
+          favorite: "false"
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+    .then(()=>{
+      location.reload()
+    })
+    .catch(()=>{
+      alert("No se recibio respuesta del servidor")
+    })
+  }
 })
 
 fetch(urlMovies)
@@ -51,7 +59,7 @@ fetch(urlMovies)
             <td>${e.synopsis}</td>
             <td>${e.response}</td>
             <td>
-              <button type="button" class="btn btn-primary m-1 btnTarantino text-center" data-bs-toggle="modal" data-bs-target="#editMovieModal" id="${e.id}" onclick="getIdBtn(id)">Editar pelicula</button>
+              <button type="button" class="btn btn-primary m-1 btnTarantino text-center" data-bs-toggle="modal" data-bs-target="#editMovieModal" id="${e.id}" onclick="getIdBtn(id)">Editar</button>
               <div class="modal fade " id="editMovieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modalTarantino">
@@ -80,7 +88,7 @@ fetch(urlMovies)
                 </div>
               </div>
             </td>
-            <td><button class="btn btn-primary m-1 btnTarantino text-center btnDelete" id="${e.id}" onclick="btnDelete(id)">Eliminar pelicula</button></td>
+            <td><button class="btn btn-primary m-1 btnTarantino text-center btnDelete" id="${e.id}" onclick="btnDelete(id)">Eliminar</button></td>
             <td>
               <div class="form-check">
                 <input class="form-check-input " type="checkbox" id="300${e.id}" onclick="favoriteMovie(id)">
@@ -101,36 +109,43 @@ function getIdBtn(e){
   console.log(btnId);
 }
 function btnPut(e){
-  console.log(btnId);
   const editCheckbox = document.querySelector("#editCheckbox");
   document.querySelector("#editCheckbox").checked? editCheckbox.value = "publicada" : editCheckbox.value = "No publicada";
-
-  fetch(`${urlMovies}/${btnId}`,{
-    method: "PUT",
-    body: JSON.stringify({
-      title: document.querySelector("#editTitleMovie").value,
-        year: document.querySelector("#editYearMovie").value,
-        rated: document.querySelector("#editRatedMovie").value,
-        runtime: document.querySelector("#editRuntimeMovie").value,
-        director: document.querySelector("#editDirectorMovie").value,
-        writer: document.querySelector("#editWriterMovie"),
-        actors: document.querySelector("#editActorsMovie").value,
-        category: document.querySelector("#editCategoryMovie").value,
-        language: document.querySelector("#editLanguageMovie").value,
-        synopsis: document.querySelector("#editSynopsisMovie").value,
-        imdbRating: document.querySelector("#editImdbRatingMovie").value,
-        image: document.querySelector("#editImageMovie").value,
-        urlEspañol: document.querySelector("#editUrlEspañolMovie").value,
-        urlIngles: document.querySelector("#editUrlInglesMovie").value,
-        response: document.querySelector("#editCheckbox").value
-  }),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-  })
-  .then(()=>{
-    location.reload()
-  })
+  if(document.querySelector("#editTitleMovie").value == "" || document.querySelector("#editYearMovie").value == "" 
+  || document.querySelector("#editRatedMovie").value == "" || document.querySelector("#editRuntimeMovie").value == "" 
+  || document.querySelector("#editDirectorMovie").value == "" || document.querySelector("#editWriterMovie").value == "" 
+  || document.querySelector("#editActorsMovie").value == "" || document.querySelector("#editCategoryMovie").value == "" 
+  || document.querySelector("#editLanguageMovie").value == "" || document.querySelector("#editSynopsisMovie").value == ""
+  || document.querySelector("#editImdbRatingMovie").value == "" || document.querySelector("#editImageMovie").value == ""){
+    alert("los campos no pueden estar vacios")
+  } else {
+    fetch(`${urlMovies}/${btnId}`,{
+      method: "PUT",
+      body: JSON.stringify({
+        title: document.querySelector("#editTitleMovie").value,
+          year: document.querySelector("#editYearMovie").value,
+          rated: document.querySelector("#editRatedMovie").value,
+          runtime: document.querySelector("#editRuntimeMovie").value,
+          director: document.querySelector("#editDirectorMovie").value,
+          writer: document.querySelector("#editWriterMovie"),
+          actors: document.querySelector("#editActorsMovie").value,
+          category: document.querySelector("#editCategoryMovie").value,
+          language: document.querySelector("#editLanguageMovie").value,
+          synopsis: document.querySelector("#editSynopsisMovie").value,
+          imdbRating: document.querySelector("#editImdbRatingMovie").value,
+          image: document.querySelector("#editImageMovie").value,
+          urlEspañol: document.querySelector("#editUrlEspañolMovie").value,
+          urlIngles: document.querySelector("#editUrlInglesMovie").value,
+          response: document.querySelector("#editCheckbox").value
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    })
+    .then(()=>{
+      location.reload()
+    })
+  }
 }
 
 function btnDelete(e){

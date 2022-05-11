@@ -15,23 +15,28 @@
   </head>
   <body>
     <main>
-      <div class="d-flex flex-column justify-content-center m-4">
-        <button type="button" class="btn btn-primary m-1 btnTarantino text-center" data-bs-toggle="modal" data-bs-target="#addMoviesModal">Añadir pelicula</button>
+      <div class="container mb-5 mt-5">
+        <h1 class="logoStyle">Administrador</h1>
+      </div>
+      <div class="d-flex flex-column bd-highlight m-3">
+          <div class="d-flex flex-row justify-content-end">
+            <button type="button" class="btn btn-primary m-1 btnTarantino w-25" data-bs-toggle="modal" data-bs-target="#addMoviesModal">Añadir pelicula</button>
+          </div>
         <div class="modal fade " id="addMoviesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modalTarantino">
               <div class="modal-content addMovieModal p-5 bgTarantino">
-                <input type="text" class="m-2" placeholder="title" id="titleMovie">
-                <input type="text" class="m-2" placeholder="year" id="yearMovie">
-                <input type="text" class="m-2" placeholder="rated" id="ratedMovie">
-                <input type="text" class="m-2" placeholder="Runtime" id="runtimeMovie">
-                <input type="text" class="m-2" placeholder="director" id="directorMovie">
-                <input type="text" class="m-2" placeholder="Writer" id="writerMovie">
-                <input type="text" class="m-2" placeholder="Actors" id="actorsMovie">
-                <input type="text" class="m-2" placeholder="category" id="categoryMovie">
-                <input type="text" class="m-2" placeholder="Language" id="languageMovie">
-                <input type="text" class="m-2" placeholder="synopsis" id="synopsisMovie">
-                <input type="text" class="m-2" placeholder="imdbRating" id="imdbRatingMovie">
+                <input type="text" class="m-2" placeholder="title" id="titleMovie" maxlength="20">
+                <input type="text" class="m-2" placeholder="year" id="yearMovie" maxlength="4">
+                <input type="text" class="m-2" placeholder="rated" id="ratedMovie" maxlength="4">
+                <input type="text" class="m-2" placeholder="Runtime" id="runtimeMovie" maxlength="10">
+                <input type="text" class="m-2" placeholder="director" id="directorMovie" maxlength="20">
+                <input type="text" class="m-2" placeholder="Writer" id="writerMovie" maxlength="20">
+                <input type="text" class="m-2" placeholder="Actors" id="actorsMovie" maxlength="20">
+                <input type="text" class="m-2" placeholder="category" id="categoryMovie" maxlength="20">
+                <input type="text" class="m-2" placeholder="Language" id="languageMovie" maxlength="20">
+                <input type="text" class="m-2" placeholder="synopsis" id="synopsisMovie" maxlength="50">
+                <input type="text" class="m-2" placeholder="imdbRating" id="imdbRatingMovie" maxlength="4">
                 <input type="text" class="m-2" placeholder="image" id="imageMovie">
                 <input type="text" class="m-2" placeholder="urlEspañol" id="urlEspañolMovie">
                 <input type="text" class="m-2" placeholder="urlIngles" id="urlInglesMovie">
@@ -44,7 +49,7 @@
             </div>
           </div>
         </div>
-      <div>
+      <div class="table-responsive-sm">
         <table class="table table table-dark table-striped">
           <thead>
             <tr>
@@ -55,7 +60,7 @@
               <th scope="col">Publicar</th>
               <th scope="col"></th>
               <th scope="col"></th>
-              <th scope="col"></th>
+              <th scope="col">Destacada</th>
             </tr>
           </thead>
           <tbody id="trBody">
