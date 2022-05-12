@@ -82,16 +82,16 @@ fetch(urlMovies)
                         <input class="form-check-input" type="checkbox" id="editCheckbox">
                         <label class="form-check-label" for="checkbox">Publicar</label>
                       </div>
-                      <button type="submit" class="btn btn-primary btnEdit" id="${e.id}" onclick="btnPut(id)">Editar</button>
+                      <button type="submit" class="btn btn-primary btnEdit" id="editBtn" onclick="btnPut(id)">Editar</button>
                     </div>
                   </div>
                 </div>
               </div>
             </td>
-            <td><button class="btn btn-primary m-1 btnTarantino text-center btnDelete" id="${e.id}" onclick="btnDelete(id)">Eliminar</button></td>
+            <td><button class="btn btn-primary m-1 btnTarantino text-center btnDelete" id="100${e.id}" onclick="btnDelete(id)">Eliminar</button></td>
             <td>
               <div class="form-check">
-                <input class="form-check-input " type="checkbox" id="300${e.id}" onclick="favoriteMovie(id)">
+                <input class="form-check-input " type="checkbox" id="200${e.id}" onclick="favoriteMovie(id)">
                 <label class="form-check-label" for="checkbox">Destacada</label>
               </div>
             </td>
@@ -104,11 +104,10 @@ fetch(urlMovies)
     })
     
 let btnId;
-function getIdBtn(e){
+const getIdBtn = (e)=>{
   btnId = e;
-  console.log(btnId);
 }
-function btnPut(e){
+const btnPut = ()=>{
   const editCheckbox = document.querySelector("#editCheckbox");
   document.querySelector("#editCheckbox").checked? editCheckbox.value = "publicada" : editCheckbox.value = "No publicada";
   if(document.querySelector("#editTitleMovie").value == "" || document.querySelector("#editYearMovie").value == "" 
@@ -148,8 +147,8 @@ function btnPut(e){
   }
 }
 
-function btnDelete(e){
-  fetch(`${urlMovies}/${e}`,{
+const btnDelete = (e)=>{
+  fetch(`${urlMovies}/${parseInt(e)-1000}`,{
     method: "DELETE"
   })
     .then(()=>{
@@ -160,7 +159,7 @@ function btnDelete(e){
     })
 };
 
-function favoriteMovie(e){
+const favoriteMovie = (e)=>{
   fetch(urlMovies)
   .then(response=>response.json())
   .then(data=>data.forEach(element=>{
@@ -174,7 +173,7 @@ function favoriteMovie(e){
       }
     })
     .then(()=>{
-      fetch(`${urlMovies}/${parseInt(e)-3000}`,{
+      fetch(`${urlMovies}/${parseInt(e)-2000}`,{
         method:"PATCH",
         body: JSON.stringify({
           favorite: "true"
@@ -194,8 +193,8 @@ window.addEventListener("load",()=>{
   fetch(urlMovies)
     .then(response => response.json())
     .then(data=>data.forEach((e)=>{
-      e.favorite == "true"? document.getElementById(`300${e.id}`).setAttribute("checked",""):document.getElementById(`300${e.id}`).removeAttribute("checked","");
-      console.log(document.getElementById(`300${e.id}`));
+      e.favorite == "true"? document.getElementById(`200${e.id}`).setAttribute("checked",""):document.getElementById(`200${e.id}`).removeAttribute("checked","");
+      console.log(document.getElementById(`200${e.id}`));
     }))
 })
 
