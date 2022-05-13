@@ -82,7 +82,7 @@ fetch(urlMovies)
                         <input class="form-check-input" type="checkbox" id="editCheckbox">
                         <label class="form-check-label" for="checkbox">Publicar</label>
                       </div>
-                      <button type="submit" class="btn btn-primary btnEdit" id="editBtn" onclick="btnPut(id)">Editar</button>
+                      <button type="submit" class="btn btn-primary btnTarantino" id="editBtn" onclick="btnPut(id)">Editar</button>
                     </div>
                   </div>
                 </div>
@@ -194,7 +194,6 @@ window.addEventListener("load",()=>{
     .then(response => response.json())
     .then(data=>data.forEach((e)=>{
       e.favorite == "true"? document.getElementById(`200${e.id}`).setAttribute("checked",""):document.getElementById(`200${e.id}`).removeAttribute("checked","");
-      console.log(document.getElementById(`200${e.id}`));
     }))
 })
 
