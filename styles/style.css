@@ -21,6 +21,7 @@ body{
 .btnTarantino{
   background-color:#D94711 ;
   color: #E6E7E9;
+  border: 0px;
   border-radius: 5px;
   font-family: "Mulish 500";
 }

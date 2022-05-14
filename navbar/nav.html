@@ -19,39 +19,31 @@
         <h1 class="logo-tarantino">TARANTINO</h1>
       </div>
       <div class="hijo_2">
+        <a href="#" class="menu_link" id="adminLink">ADMINISTRADOR</a>
+      </div>
+      <div class="hijo_2">
         <a href="#" class="menu_link">INICIO</a>
       </div>
       <div class="dropdown hijo_2">
-        <li
-          class="text-decoration-none menu_item"
-          type="button"
-          id="dropdownPeliculas"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          PELICULAS
-        </li>
-        <ul
-          class="dropdown-menu text-decoration-none menu_nesting"
-          aria-labelledby="dropdownPeliculas"
-        >
+        <li class="text-decoration-none menu_item" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">PELICULAS</li>
+        <ul class="dropdown-menu text-decoration-none menu_nesting" aria-labelledby="dropdownPeliculas">
           <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside" id="accion" onclick="categorias(id)">Accion</a>
+            <a href="#" class="menu_link menu_link_inside" id="accion" onclick="moveToCategory(id)">Accion</a>
           </li>
           <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside" id="comedia" onclick="categorias(id)">Comedia</a>
+            <a href="#" class="menu_link menu_link_inside" id="comedia" onclick="moveToCategory(id)">Comedia</a>
           </li>
           <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside" id="drama" onclick="categorias(id)">Drama</a>
+            <a href="#" class="menu_link menu_link_inside" id="drama" onclick="moveToCategory(id)">Drama</a>
           </li>
           <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside" id="ficcion" onclick="categorias(id)">Ficcion</a>
+            <a href="#" class="menu_link menu_link_inside" id="ficcion" onclick="moveToCategory(id)">Ficcion</a>
           </li>
           <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside" id="romance" onclick="categorias(id)">Romance</a>
+            <a href="#" class="menu_link menu_link_inside" id="romance" onclick="moveToCategory(id)">Romance</a>
           </li>
           <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside" id="terror" onclick="categorias(id)">Terror</a>
+            <a href="#" class="menu_link menu_link_inside" id="terror" onclick="moveToCategory(id)">Terror</a>
           </li>
         </ul>
       </div>
@@ -65,6 +57,7 @@
             type="search"
             placeholder="Buscar"
             aria-label="Buscar"
+            id="inputSearch"
           />
           <img src="./lupa.svg" alt="lupa" class="menu_img" id="search" />
         </form>
@@ -85,9 +78,6 @@
         >
           <li class="menu_inside">
             <a href="#" class="menu_link menu_link_inside">AYUDA</a>
-          </li>
-          <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside">ADMINISTRADOR</a>
           </li>
           <li class="menu_inside">
             <a href="#" class="menu_link menu_link_inside">CERRAR SESION</a>

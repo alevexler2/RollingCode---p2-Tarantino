@@ -5,7 +5,7 @@ const checkbox = document.querySelector("#checkbox");
 
 btnPost.addEventListener("click",()=>{
   checkbox.checked? checkbox.value = "publicada" : checkbox.value = "No publicada";
-if(document.querySelector("#titleMovie").value == "" || document.querySelector("#yearMovie").value == "" 
+if(document.getElementsByTagName("#titleMovie").value == "" || document.querySelector("#yearMovie").value == "" 
   || document.querySelector("#ratedMovie").value == "" || document.querySelector("#runtimeMovie").value == "" 
   || document.querySelector("#directorMovie").value == "" || document.querySelector("#writerMovie").value == "" 
   || document.querySelector("#actorsMovie").value == "" || document.querySelector("#categoryMovie").value == "" 
@@ -166,7 +166,7 @@ const favoriteMovie = (e)=>{
     fetch(`${urlMovies}/${element.id}`,{
       method:"PATCH",
       body: JSON.stringify({
-        favorite: "false"
+        favorite: false
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -176,7 +176,7 @@ const favoriteMovie = (e)=>{
       fetch(`${urlMovies}/${parseInt(e)-2000}`,{
         method:"PATCH",
         body: JSON.stringify({
-          favorite: "true"
+          favorite: true
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -193,7 +193,7 @@ window.addEventListener("load",()=>{
   fetch(urlMovies)
     .then(response => response.json())
     .then(data=>data.forEach((e)=>{
-      e.favorite == "true"? document.getElementById(`200${e.id}`).setAttribute("checked",""):document.getElementById(`200${e.id}`).removeAttribute("checked","");
+      e.favorite == true? document.getElementById(`200${e.id}`).setAttribute("checked",""):document.getElementById(`200${e.id}`).removeAttribute("checked","");
     }))
 })
 
