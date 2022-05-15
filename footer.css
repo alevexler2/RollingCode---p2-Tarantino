@@ -1,0 +1,115 @@
+@font-face{
+  font-family: ADSlanted;
+  src: url("./font/Another\ Danger\ Slanted\ -\ Demo.otf");
+}
+
+
+
+.footerMovie{
+  background-color:#1F1110 ;
+  padding-top: 2.2em;
+  padding-bottom: 4em;
+}
+
+.fontADS{
+  font-family: ADSlanted;
+  font-size: 9vw;
+  color: #E6E7E9;
+}
+
+.botonesMedia{
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-top: 4vh;
+}
+
+.btnMedia{
+  background-color: rgb(97, 95, 95);
+}
+
+.nombresDesarrolladores{
+  font-size: 0.8em;
+  padding: 1em;
+  margin: 1em;
+  color: #b4b4b4;
+}
+
+
+.imagenStyle{
+  width: 5em;
+  height: 5em;
+  margin-right: 2em;
+  margin-top: 0;
+  margin-left: 1.5em;
+}
+
+.copyright::before{
+  content: "©";
+}
+
+.copyright{
+  margin-top: 1em;
+  color: #E6E7E9;
+}
+
+.suscripcion{
+  text-decoration-color:#E6E7E9 ;
+}
+
+.suscripcion a {
+  color: #dd6334;
+}
+
+.tarantinoInfo{
+  font-family: 'Mulish', sans-serif;
+  color: #b4b4b4;
+}
+
+.fontDevs{
+  font-family: 'Mulish', sans-serif;
+  color: #E6E7E9;
+  margin-bottom: 1.4rem;
+}
+
+.devsCards {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.devsCards p {
+  padding: 0;
+  margin: 0;
+}
+
+.devsCards img {
+  margin: 0;
+}
+
+.devsCards div {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 849px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media (max-width: 679px) {
+  .wrapper {
+    width: 100%;
+  }
+}
