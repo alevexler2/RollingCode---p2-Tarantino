@@ -1,0 +1,110 @@
+body{
+    background: rgb(148,18,5);
+    background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
+    
+}
+.moviePri{
+	background-image: url("https://i.pinimg.com/originals/78/13/11/781311cb075b41202e40e6f3c3f05a76.jpg");
+	height: max-content;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+.boxMovie{
+	margin-top: 40%;
+}
+
+.btnTarantino{
+    background-color:#D94711 ;
+    color: #E6E7E9;
+    border: 0px;
+    border-radius: 5px;
+    font-family: "Mulish 500";
+  }
+  .btnTarantino:hover {
+    color: #fff;
+    background-color: #400202;
+  }
+/* ---- ----- ----- zoom card ----- ----- ----- */
+.card.zoom{
+
+	padding: 0px;
+	transition: transform .2s; /* Animation */
+	width: 375px;
+	height: 375px;
+	margin: 0 auto;
+  }
+  .zoom:hover {
+	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .zoom:hover .card-body{
+	  visibility: visible;
+  }
+  .card-body{
+	  visibility: hidden;
+  }
+
+  /*---------------------navbar------------*/
+
+  .padre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#1F1110 ;
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    z-index: 100;
+}
+.hijo_1{
+    color: #E6E7E9;
+    margin: 15px;
+    margin-right: 20%;
+    font-family: fantasy;
+    font-size: xx-large;
+}
+.hijo_2{
+    color: #E6E7E9;
+    margin: 15px;
+    font-family: fantasy;
+    font-size: large;
+}
+.hijo_2 :hover{
+    transition: all 100ms;
+    font-size: 1.1em;
+    color: #F2BB13;
+}
+.menu_img{
+    width: 50px;
+}
+.menu_link{
+    text-decoration: none;
+    color: #E6E7E9;
+}
+.menu_nesting{
+    background-color: #1F1110;
+    transition: all 600ms;
+}
+.menu_inside{
+    background-color: #1F1110;
+    margin: 10px;
+}
+.menu_nesting.show{
+    background-color: #1F1110;
+}
+.hijo_3{
+    margin: 5px;
+    display: none;
+    transition: 200ms;
+}
+.menu_inside{
+ padding: 20px;
+}
+@media (max-width:800px) {
+    .hijo_2{
+        display: none;
+    }
+    .hijo_3{
+        display: flex;
+        }
+}
