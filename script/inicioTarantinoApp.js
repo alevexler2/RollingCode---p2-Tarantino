@@ -54,7 +54,7 @@ setTimeout(() => {
           return respuesta.innerHTML = "El usuario o la contraseña son incorectos";
         } else {
           localStorage.setItem("contraseña", inputPass.value);
-          localStorage.setItem("Usuario", inputUser.value);
+          localStorage.setItem("correo", inputUser.value);
           bgTarantino.innerHTML = 
           `<div class="container-fluid d-flex justify-content-center animate__animated animate__fadeIn">
             <div class="row">
@@ -83,3 +83,7 @@ setTimeout(() => {
       });
   });
 }, 2050);
+
+window.addEventListener("load", ()=>{
+  localStorage.clear();
+})

@@ -1,7 +1,6 @@
 const urlMovies = "http://localhost:3000/movies"
 const urlUsers = "http://localhost:3000/users";
-const inputSearch = document.querySelector("#inputSearch")
-
+const linkAdmin = document.querySelector("#adminLink")
 inputSearch.addEventListener("keydown",()=>{
   fetch(urlMovies)
     .then(response => response.json())
@@ -14,25 +13,26 @@ inputSearch.addEventListener("keydown",()=>{
 })
 
 window.addEventListener("load", ()=>{
-let correo = localStorage.getItem("correo")
-let contraseña = localStorage.getItem("contraseña")
   fetch(urlUsers)
     .then(response=>response.json())
-    .then(data=>data.forEach(e => {
-      let usuario;
-      console.log(e.contraseña);
-      if(contraseña == e.contraseña && correo == e.usuario){
-       usuario = e.administrador
-      } else {
-      // window.location = "http://127.0.0.1:5501/index.html"
-      }
-      console.log(usuario);
-      usuario == false? adminLink.classList.add("d-none"): adminLink.classList.remove("d-none");
-    }))
-    
+    .then(data=>{
+      let correos = data.map(e=>{return e.correo})
+      let correo = correos.find(e=>{return e == localStorage.getItem("correo")})
+      correo != localStorage.getItem("correo")? window.location = "http://127.0.0.1:5501/index.html": "";
+    })
+  fetch(`${urlUsers}/1`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.correo);
+      console.log(localStorage.getItem("correo"));
+      data.correo == localStorage.getItem("correo")? document.querySelector("#adminLink").classList.remove("d-none"): document.querySelector("#adminLink").classList.add("d-none");
+      console.log(linkAdmin);
+    })  
 })
 
 
+/*-----------------------------------------
+*/ 
 
 
 window.addEventListener("load", ()=>{
