@@ -45,6 +45,7 @@ setTimeout(() => {
       .then((response) => {
         if (response.length != 0) {
           response.forEach(element => {
+            console.log(element);
             if (inputUser.value == element.correo) {
               if (inputPass.value == element.contraseña) {
                 window.localStorage.setItem("usuario", inputUser.value);
@@ -59,7 +60,7 @@ setTimeout(() => {
                   </div>
                 </div>`;
                 setTimeout(() => {
-                  window.location = "http://127.0.0.1:5500/index.html";
+                  window.location = "http://127.0.0.1:5501/pages/homepage.html";
                 }, 5000);
               } else {
                 return respuesta.innerHTML = "La contraseña es incorrecta";

@@ -30,8 +30,8 @@
               <input class="form-control mb-3 border-0 casilla-registro" type="text" name="nombre" id="nombre" placeholder="nombre" required/>
               <input class="form-control mb-3 border-0 casilla-registro" type="text" name="apellido" id="apellido" placeholder="apellido" required/>
               <input class="form-control mb-3 border-0 casilla-registro" type="email" name="correo" id="correo" placeholder="correo" required pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"/>
-              <input class="form-control mb-3 border-0 casilla-registro" type="password" name="contraseña" id="contraseña" placeholder="contraseña" required/>
-              <input class="form-control mb-1 border-0 casilla-registro" type="password" name="revalidar" id="revalidar" placeholder="repetir contraseña" required/>
+              <input class="form-control mb-3 border-0 casilla-registro" type="password" name="contraseña" id="contraseña" placeholder="contraseña" required minlength="8" maxlength="15"/>
+              <input class="form-control mb-1 border-0 casilla-registro" type="password" name="revalidar" id="revalidar" placeholder="repetir contraseña" required minlength="8" maxlength="15"/>
               <small class="d-flex justify-content-start mx-0 mb-3 text-secondary" id="respuesta"></small>
               <button class="btn col-8 border-0 btnTarantino" id="btnCrear" type="button">CREAR</button>
               <small class="text-center mt-3 text-secondary">
