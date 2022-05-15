@@ -18,12 +18,8 @@ btn.addEventListener("click", () => {
     fetch(urlUsers)
     .then(response => response.json())
     .then(data=>{
-      let users = data.map(e => {
-        return e.correo
-      })
-      let user = users.find(e => {
-      return e == inputCorreo.value
-    })
+      let users = data.map(e => {return e.correo})
+      let user = users.find(e => {return e == inputCorreo.value})
     if(user == inputCorreo.value){
       return respuesta.innerHTML = "El usuario ya existe";
     } else {

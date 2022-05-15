@@ -1,4 +1,5 @@
 const bgTarantino = document.querySelector(".bgTarantino");
+const urlUsers = "http://localhost:3000/users";
 setTimeout(() => {
   bgTarantino.innerHTML = 
   `<section class="container animate__animated animate__fadeIn" id="loginContainer">
@@ -6,8 +7,8 @@ setTimeout(() => {
       <h1 class="text-white d-flex justify-content-center align-items-end logoStyle">Tarantino</h1>
       <small class="container text-center d-flex justify-content-center mb-1 text-secondary col-8 col-sm-5 col-md-4 col-lg-10" id="respuesta"></small>
       <div class="container mb-3 col-8 col-sm-6 col-md-5 col-xl-4 col-xxl-3">
-        <input type="email" class="form-control mb-3 border-0 casilla-registro" id="inputUser" placeholder="correo" required/>
-        <input type="password" class="form-control mb-1 border-0 casilla-registro" id="inputPass" placeholder="contraseña" required/>
+        <input type="email" class="form-control mb-3 border-0 casilla-registro" id="inputUser" placeholder="correo" maxlength="35" required/>
+        <input type="password" class="form-control mb-1 border-0 casilla-registro" id="inputPass" placeholder="contraseña" maxlength="15" required/>
         <small><a type="button" class="text-secondary d-flex justify-content-end text-decoration-none px-3" data-bs-toggle="modal" data-bs-target="#modalPass">¿Olvidaste tu contraseña?</a></small>
       </div>
       <div class="row d-flex justify-content-center">
@@ -39,66 +40,46 @@ setTimeout(() => {
   const btnLogin = document.querySelector("#btnLogin");
   const respuesta = document.querySelector("#respuesta");
   btnLogin.addEventListener("click", () => {
-    if (inputUser.value != "" && inputPass.value != "") {
-      fetch("http://localhost:3000/users/")
-      .then((response) => response.json())
-      .then((response) => {
-        if (response.length != 0) {
-          response.forEach(element => {
-            console.log(element);
-            if (inputUser.value == element.correo) {
-              if (inputPass.value == element.contraseña) {
-                window.localStorage.setItem("usuario", inputUser.value);
-                window.localStorage.setItem("contraseña", inputPass.value);
-                const loadLog = document.querySelector(".bgTarantino");
-                loadLog.innerHTML = 
-                `<div class="container-fluid d-flex justify-content-center animate__animated animate__fadeIn">
-                  <div class="row">
-                    <h1 class="text-white d-flex justify-content-center align-items-end mb-2 logoStyle">Tarantino</h1>
-                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                    <lottie-player class="spinLoad" src="https://assets3.lottiefiles.com/private_files/lf30_4pdkhaet.json" speed="1" loop autoplay></lottie-player>
-                  </div>
-                </div>`;
-                setTimeout(() => {
-                  window.location = "http://127.0.0.1:5501/pages/homepage.html";
-                }, 5000);
-              } else {
-                return respuesta.innerHTML = "La contraseña es incorrecta";
-              }
-            } else {
-              return respuesta.innerHTML = "El correo es incorrecto";
-            }
-          });
-        } else {
-          return respuesta.innerHTML = "Cree una cuenta para continuar";
-        }
-      });
-    } else {
+    if (inputUser.value == "" || inputPass.value == "") {
       return respuesta.innerHTML = "El correo o la contraseña no pueden estar vacíos";
-    }
-  });
+    } else {
+      fetch(urlUsers)
+      .then(response => response.json())
+      .then(data => {
+        let users = data.map(e =>{return e.correo})
+        let passwords = data.map(e =>{return e.contraseña})
+        let user = users.find(e =>{return e ==  inputUser.value})
+        let pass = passwords.find(e =>{return e ==  inputPass.value})
+        if(user != inputUser.value || pass != inputPass.value){
+          return respuesta.innerHTML = "El usuario o la contraseña son incorectos";
+        } else {
+          localStorage.setItem("contraseña", inputPass.value);
+          localStorage.setItem("Usuario", inputUser.value);
+          bgTarantino.innerHTML = 
+          `<div class="container-fluid d-flex justify-content-center animate__animated animate__fadeIn">
+            <div class="row">
+              <h1 class="text-white d-flex justify-content-center align-items-end mb-2 logoStyle">Tarantino</h1>
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player class="spinLoad" src="https://assets3.lottiefiles.com/private_files/lf30_4pdkhaet.json" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>`;
+          setTimeout(()=>{
+            window.location = "http://127.0.0.1:5501/pages/homepage.html";
+          },5000)
+        }
+      })      
+  }})
   const btnRecuperar = document.querySelector("#btnRecuperar");
   const inputRec = document.querySelector("#inputRec"); 
+  const recRespuesta = document.querySelector("#recRespuesta"); 
+  
   btnRecuperar.addEventListener("click", () => {
-    if (inputRec.value != "") {
       fetch("http://localhost:3000/users/")
       .then((response) => response.json())
       .then((response) => {
-        if (response.length != 0) {
-          response.find((element) => {
-            if (inputRec.value == element.correo) {
-              return recRespuesta.innerHTML = `su contraseña es: <b>${element.contraseña}</b>`;
-            }
-            else {
-              return recRespuesta.innerHTML = "No se ha encontrado el correo";
-            }
-          });
-        } else {
-          return recRespuesta.innerHTML = "No se ha encontrado el correo";          
-        }
+        let users = response.map(e => {return e.correo})
+        let user = users.find(e => {return e == inputRec.value})
+        user == inputRec.value? recRespuesta.innerHTML = "Los pasos para recuperar su contraseña fueron enviadas a su Email": recRespuesta.innerHTML = "El Email ingresado no se encontro en nuestra base de datos";
       });
-    } else {
-      return recRespuesta.innerHTML = "Ingrese el correo que desea recuperar";      
-    }
   });
 }, 2050);
