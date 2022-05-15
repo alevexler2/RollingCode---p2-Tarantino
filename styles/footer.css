@@ -1,9 +1,13 @@
 @font-face{
-  font-family: ADSlanted;
-  src: url("./font/Another\ Danger\ Slanted\ -\ Demo.otf");
+  font-family: 'Another Danger';
+  src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
 }
-
-
+.logoStyle{
+  font-family:'Another Danger';
+  font-size: calc(1.5rem + 10vw);
+  margin-bottom: 2rem;
+  color: white;
+}
 
 .footerMovie{
   background-color:#1F1110 ;
