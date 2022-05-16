@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'Another Danger';
+    src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
+  }
 body{
     background: rgb(148,18,5);
     background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
     
 }
 .moviePri{
+  top: 0;
+  margin-top: 90px;
 	height: max-content;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -46,8 +52,14 @@ body{
   }
 
   /*---------------------navbar------------*/
+  .logo-tarantino{
+    font-family:'Another Danger';
+    color: #E6E7E9;
+    text-align: center;
+  }
 
   .padre{
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
