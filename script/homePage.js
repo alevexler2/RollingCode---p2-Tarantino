@@ -38,8 +38,7 @@ btnClose.addEventListener("click",()=>{
   window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/index.html";
 })
 
-/*-----------------------------------------
-*/ 
+/*-----------------------------------------*/ 
 
 
 window.addEventListener("load", ()=>{
