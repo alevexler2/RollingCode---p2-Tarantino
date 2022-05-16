@@ -12,6 +12,8 @@ body{
     
 }
 .moviePri{
+  top: 0;
+  margin-top: 90px;
 	height: max-content;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -54,8 +56,14 @@ body{
   }
 
   /*---------------------navbar------------*/
+  .logo-tarantino{
+    font-family:'Another Danger';
+    color: #E6E7E9;
+    text-align: center;
+  }
 
   .padre{
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -228,3 +236,39 @@ body{
 		margin: 2px;
 	}
 }
+/*-------------------------------------------*/
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+  }
+   
+  /* Style the back side */
+  .flip-card-back {
+	transform: rotateY(180deg);
+  }
+
+  .flip-card.zoom{
+	transition: transform .2s; /* Animation */
+  }
+  .zoom:hover {
+	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }

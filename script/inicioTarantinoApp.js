@@ -64,7 +64,7 @@ setTimeout(() => {
             </div>
           </div>`;
           setTimeout(()=>{
-            window.location = "http://127.0.0.1:5501/pages/homepage.html";
+            window.location = "http://127.0.0.1:5500/pages/homepage.html";
           },5000)
         }
       })      
