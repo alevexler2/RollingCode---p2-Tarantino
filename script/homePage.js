@@ -26,10 +26,7 @@ window.addEventListener("load", ()=>{
   fetch(`${urlUsers}/1`)
     .then(response => response.json())
     .then(data => {
-      console.log(data.correo);
-      console.log(localStorage.getItem("correo"));
       data.correo == localStorage.getItem("correo")? document.querySelector("#adminLink").classList.remove("d-none"): document.querySelector("#adminLink").classList.add("d-none");
-      console.log(linkAdmin);
     })  
 })
 
