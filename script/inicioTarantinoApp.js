@@ -64,7 +64,7 @@ setTimeout(() => {
             </div>
           </div>`;
           setTimeout(()=>{
-            window.location = "http://127.0.0.1:5500/pages/homepage.html";
+            window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/pages/homepage.html";
           },5000)
         }
       })      

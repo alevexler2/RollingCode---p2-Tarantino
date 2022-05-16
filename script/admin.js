@@ -63,35 +63,40 @@ fetch(urlMovies)
               <div class="modal fade " id="editMovieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modalTarantino">
-                    <div class="modal-content addMovieModal p-5 bgTarantino">
-                      <input type="text" class="m-2" placeholder="title" id="editTitleMovie">
-                      <input type="text" class="m-2" placeholder="year" id="editYearMovie">
-                      <input type="text" class="m-2" placeholder="rated" id="editRatedMovie">
-                      <input type="text" class="m-2" placeholder="Runtime" id="editRuntimeMovie">
-                      <input type="text" class="m-2" placeholder="director" id="editDirectorMovie">
-                      <input type="text" class="m-2" placeholder="Writer" id="editWriterMovie">
-                      <input type="text" class="m-2" placeholder="Actors" id="editActorsMovie">
-                      <input type="text" class="m-2" placeholder="category" id="editCategoryMovie">
-                      <input type="text" class="m-2" placeholder="Language" id="editLanguageMovie">
-                      <input type="text" class="m-2" placeholder="synopsis" id="editSynopsisMovie">
-                      <input type="text" class="m-2" placeholder="imdbRating" id="editImdbRatingMovie">
-                      <input type="text" class="m-2" placeholder="image" id="editImageMovie">
-                      <input type="text" class="m-2" placeholder="urlEspañol" id="editUrlEspañolMovie">
-                      <input type="text" class="m-2" placeholder="urlIngles" id="editUrlInglesMovie">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="editCheckbox">
-                        <label class="form-check-label" for="checkbox">Publicar</label>
+                    <div class="container px-0 d-flex justify-content-center modal-content border-0 bgColorTarantino bgTarantino addMovieModal">
+                      <button type="button" class="btn-close btn-close-white align-self-end pe-5 my-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <div class="container justify-content-center px-5">
+                        <input type="text" class="form-control my-1" placeholder="title" id="editTitleMovie">
+                        <input type="text" class="form-control my-1" placeholder="year" id="editYearMovie">
+                        <input type="text" class="form-control my-1" placeholder="rated" id="editRatedMovie">
+                        <input type="text" class="form-control my-1" placeholder="Runtime" id="editRuntimeMovie">
+                        <input type="text" class="form-control my-1" placeholder="director" id="editDirectorMovie">
+                        <input type="text" class="form-control my-1" placeholder="Writer" id="editWriterMovie">
+                        <input type="text" class="form-control my-1" placeholder="Actors" id="editActorsMovie">
+                        <input type="text" class="form-control my-1" placeholder="category" id="editCategoryMovie">
+                        <input type="text" class="form-control my-1" placeholder="Language" id="editLanguageMovie">
+                        <input type="text" class="form-control my-1" placeholder="synopsis" id="editSynopsisMovie">
+                        <input type="text" class="form-control my-1" placeholder="imdbRating" id="editImdbRatingMovie">
+                        <input type="text" class="form-control my-1" placeholder="image" id="editImageMovie">
+                        <input type="text" class="form-control my-1" placeholder="urlEspañol" id="editUrlEspañolMovie">
+                        <input type="text" class="form-control my-1" placeholder="urlIngles" id="editUrlInglesMovie">
+                        <div class="container d-flex flex-column align-items-center px-0 form-check py-2">
+                          <div class="container col-10">
+                            <input class="form-check-input col-6" type="checkbox" id="editCheckbox">
+                            <label class="form-check-label text-white" for="checkbox">Publicar</label>
+                          </div>
+                          <button type="submit" class="btn my-3 col-10 btnTarantino" id="editBtn" onclick="btnPut(id)">Editar</button>
+                        </div>
                       </div>
-                      <button type="submit" class="btn btn-primary btnTarantino" id="editBtn" onclick="btnPut(id)">Editar</button>
                     </div>
                   </div>
                 </div>
               </div>
             </td>
-            <td><button class="btn btn-primary m-1 btnTarantino text-center btnDelete" id="100${e.id}" onclick="btnDelete(id)">Eliminar</button></td>
+            <td><button class="btn m-1 btnDelete" id="${Number(100)+e.id}" onclick="btnDelete(id)">🗑</button></td>
             <td>
               <div class="form-check">
-                <input class="form-check-input " type="checkbox" id="200${e.id}" onclick="favoriteMovie(id)">
+                <input class="form-check-input" type="checkbox" id="${Number(200)+e.id}" onclick="favoriteMovie(id)">
                 <label class="form-check-label" for="checkbox">Destacada</label>
               </div>
             </td>
@@ -148,7 +153,8 @@ const btnPut = ()=>{
 }
 
 const btnDelete = (e)=>{
-  fetch(`${urlMovies}/${parseInt(e)-1000}`,{
+  console.log(e)
+  fetch(`${urlMovies}/${e - 100}`,{
     method: "DELETE"
   })
     .then(()=>{
@@ -173,7 +179,7 @@ const favoriteMovie = (e)=>{
       }
     })
     .then(()=>{
-      fetch(`${urlMovies}/${parseInt(e)-2000}`,{
+      fetch(`${urlMovies}/${e - 200}`,{
         method:"PATCH",
         body: JSON.stringify({
           favorite: true
@@ -193,13 +199,10 @@ window.addEventListener("load",()=>{
   fetch(urlMovies)
     .then(response => response.json())
     .then(data=>data.forEach((e)=>{
-      e.favorite == true? document.getElementById(`200${e.id}`).setAttribute("checked",""):document.getElementById(`200${e.id}`).removeAttribute("checked","");
+      e.favorite == true? document.getElementById(`${Number(200)+e.id}`).setAttribute("checked",""):document.getElementById(`${Number(200)+e.id}`).removeAttribute("checked","");
     }))
 })
 
-
-
-
-
-
-
+const volverInicio = () => {
+  window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/pages/homepage.html";
+}

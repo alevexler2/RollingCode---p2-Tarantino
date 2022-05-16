@@ -8,10 +8,10 @@ body{
   background-size: contain;
   background-position: center;
 }
-.bgTarantino{
+.bgColorTarantino{
   background: rgb(148,18,5);
   background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
-  height: 100vh;
+  /* height: 100vh; */
 }
 .logoStyle{
   font-family:'Another Danger';
@@ -48,16 +48,12 @@ body{
   height: 100vh;
 }
 /*estilo admin */
-.adminBody{
-  background: rgb(148,18,5);
-  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
-  height: 100vh;
-}
 .logoStyleAdmin{
   font-family:'Another Danger';
-  font-size: calc(0.5rem + 10vw);
+  font-size: calc(1rem + 10vw);
   color: #E6E7E9;
   text-align: center;
+  margin-bottom: calc(1rem + 3vw);
 }
 .cuentaCreada{
   height: 10%;
