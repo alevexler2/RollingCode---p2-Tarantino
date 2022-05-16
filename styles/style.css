@@ -2,13 +2,13 @@
   font-family: 'Another Danger';
   src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
 }
-body{
+.bgBody{
   background-image: url(../img/6e958353b6e5688fe22917284e2c7755.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-.bgTarantino{
+.bgColorTarantino{
   background: rgb(148,18,5);
   background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
   height: 100vh;
@@ -48,16 +48,12 @@ body{
   height: 100vh;
 }
 /*estilo admin */
-.adminBody{
-  background: rgb(148,18,5);
-  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
-  height: 100vh;
-}
 .logoStyleAdmin{
   font-family:'Another Danger';
-  font-size: calc(0.5rem + 10vw);
+  font-size: calc(1rem + 10vw);
   color: #E6E7E9;
   text-align: center;
+  margin-bottom: calc(1rem + 3vw);
 }
 .cuentaCreada{
   height: 10%;
@@ -175,7 +171,7 @@ body{
 }
 .team_member{
   width: 250px;
-  margin: 5px;
+  margin: 9px;
   background-color: #400202;
   padding: 20px 10px;
 }
@@ -207,4 +203,67 @@ body{
   margin-top: 20px;
   font-size: 14px;
   line-height:20px;
+}
+/* movie page */
+.bgTarantino{
+  background: rgb(148,18,5);
+  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
+}
+.bgPeli{
+  background-image: url(../img/Django_desencadenado-268392705-large.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.boxDesc{
+  margin-top: 28%;
+}
+.txtShadow{
+  text-shadow: 0px 0px 3px #000000, 0px 0px 5px #000000;
+}
+/* carrusel */
+.imgCardMovie{
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+.cardMovie:hover{
+  -webkit-box-shadow: 0px 10px 20px -20px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 10px 20px -20px rgba(0, 0, 0, 1);
+  box-shadow: 0px 10px 20px -20px rgba(0, 0, 0, 1);
+  transform: scale(1.1);
+  transform-origin: top center;
+  transition: 0.3s;
+  z-index: 1;
+}
+.boxCarrusel{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: calc(1rem + 2vw);
+}
+.cardMovie {
+  -webkit-box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 1);
+  box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 1);
+  position: relative;
+}
+.desCardMovie{
+  display: none;
+  position: absolute;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.10127801120448177) 100%);
+}
+.cardMovie:hover .desCardMovie {
+  display: block;
+  border-radius: 5px;
+}
+.btnPlay{
+  height: 100%;
+  width: 100%;
+}
+.iconPlay{
+  width: 30%;
 }

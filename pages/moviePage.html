@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="web de peliculas" />
+    <meta name="keywords" content="peliculas, series, documentales, Movies"/>
+    <meta name="author" content="Pia Blanco - Max Lezano - Ale Vexler - Matias Briseño - Tomas Molina" />
+    <meta name="copyright" content="Movies" />
+    <meta charset="UTF-8"/>
+    <link rel="shorcut icon" href="" type=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Película</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/homepageStyles.css"/>
+    <link rel="stylesheet" href="../styles/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark container-fluid py-2 navFix">
+        <div class="container-fluid">
+          <div class="navbar-brand container d-flex justify-content-start mx-0 col-2">
+            <h1 class="text-white text-decoration-none mb-0 logo-tarantino">TARANTINO</h1>
+          </div>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 container d-flex justify-content-end mx-0">
+              <div class="nav-item p-2 pe-4">
+                <a href="./admin.html" class="text-decoration-none elementNav" id="adminLink">ADMINISTRADOR</a>
+              </div>
+              <div class="nav-item p-2 pe-4">
+                <a href="./homepage.html" class="text-decoration-none elementNav">INICIO</a>
+              </div>
+              <div class="nav-item p-2 pe-4 dropdown">
+                <li class="text-decoration-none elementNav" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">PELICULAS</li>
+                <ul class="dropdown-menu menu_nesting" aria-labelledby="dropdownPeliculas">
+                  <li class="m-1 p-2">
+                    <a href="./404.html" class="text-decoration-none elementNav" id="accion">Acción</a>
+                  </li>
+                  <li class="m-1 p-2">
+                    <a href="./404.html" class="text-decoration-none elementNav" id="comedia">Comedia</a>
+                  </li>
+                  <li class="m-1 p-2">
+                    <a href="./404.html" class="text-decoration-none elementNav" id="drama">Drama</a>
+                  </li>
+                  <li class="m-1 p-2">
+                    <a href="./404.html" class="text-decoration-none elementNav" id="ficcion">Ficción</a>
+                  </li>
+                  <li class="m-1 p-2">
+                    <a href="./404.html" class="text-decoration-none elementNav" id="romance">Romance</a>
+                  </li>
+                  <li class="m-1 p-2">
+                    <a href="./404.html" class="text-decoration-none elementNav" id="terror">Terror</a>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+            <form class="container d-flex mx-0 px-0 py-2 me-3 col-10 col-lg-2 elementNav">
+              <input type="search" placeholder="Buscar" aria-label="Buscar" id="inputSearch" class="form-control rounded-pill form_buscar"/>
+            </form>
+            <div class="dropdown dpy-2">
+              <li type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../img/user.svg" alt="user" class="menu_img">
+              </li>
+              <ul class="dropdown-menu dropdown-menu-end menu_nesting" aria-labelledby="dropdownPeliculas">
+                <li class="m-1 p-2">
+                  <a href="./404.html" class="text-decoration-none elementNav">Ayuda</a>
+                </li>
+                <li class="m-1 p-2">
+                  <a href="#" class="text-decoration-none elementNav" id="btnClose">Cerrar Sesión</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="bgTarantino">
+      <section>
+        <div class="container-fluid d-flex justify-content-center bgPeli">
+          <div class="row container-fluid px-0">
+            <div class="container mb-3 px-0 col-md-11 boxDesc">
+              <img class="col-5 col-lg-3 mb-2" src="../img/Django logo.png" alt="logo django">
+              <p class="text-white d-flex col-md-8 txtShadow">Cuenta la historia de un esclavo liberado (Jamie Foxx) 
+                que sacrifica su vida al loable empeño de limpiar afrentas, vengar 
+                latigazos y liberar amadas. Si se quiere, nada que no haya hecho 
+                antes el 'western' o cualquier película de aventuras, pero, con 
+                una importante salvedad.
+              </p>
+              <button class="btn col-4 col-sm-3 col-lg-2 btnTarantino">Reproducir</button>
+              <button class="btn btn-secondary mx-2 col-3 col-sm-2 col-lg-1">Trailer</button>
+              <div class="mt-3">
+                <small class="text-white d-flex col-sm-8 col-md-6 txtShadow">
+                  Quentin Tarantino, Christoph Waltz, Jaime Foxx, Leonardo DiCaprio, Samuel L. Jackson, Kerry Washington, Walton Goggins...
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h4 class="mt-4 px-3 text-white">Recomendación para ti</h4>
+        <div class="mt-3 contCarrusel">
+          <div class="mx-3 d-flex boxCarrusel" id="carrusel">
+            <!-- acá se cargan las cards de manera dinámica -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <footer class="footerMovie">
+        <div class="redes_footer">
+          <img src="../img/what.svg" alt="whatsapp" class="red_fo"/>
+          <img src="../img/insta.svg" alt="instragam" class="red_fo"/>
+          <img src="../img/face.svg" alt="facebook" class="red_fo"/>
+          <img src="../img/twitter.svg" alt="twitter" class="red_fo"/>
+        </div>
+        <div class="texto_footer">
+          <h1 class="logo_footer text-white">TARANTINO</h1>
+          <a href="#" class="cancelar_footer text-white text-decoration-none">Cancelas subscripcion</a
+          >
+          <h4 class="text_foo text-white">
+            Tarantino es un servicio por subscripcion de pago, su contenido esta
+            sujeto a disponibilidad. El servicio Tarantino es comercializado por:
+          </h4>
+          <div class="desarrolladores text-white"><a class="text-decoration-none text-white" href="./Somos.html"><i class="desarrolladores">desarrolladores</i></a></div>
+          <div class="row img_foo">
+            <div class="desarro_foo">
+              <img
+                src="../img/alejandro.jpeg"
+                alt="Alejandro"
+                class="img_footer"
+              />
+              <span class="text-white">Ale Vexler</span>
+            </div>
+            <div class="desarro_foo">
+              <img src="../img/matias.jpeg" alt="Matias" class="img_footer" />
+              <span class="text-white">Matias Briseño</span>
+            </div>
+            <div class="desarro_foo">
+              <img src="../img/pia.jpeg" alt="Pia" class="img_footer" />
+              <span class="text-white">Pia Blanco</span>
+            </div>
+            <div class="desarro_foo">
+              <img src="../img/tomas.jpeg" alt="Tomas" class="img_footer" />
+              <span class="text-white">Tomas Molina</span>
+            </div>
+            <div class="desarro_foo">
+              <img src="../img/maxi.jpeg" alt="Maxi" class="img_footer" />
+              <span class="text-white">Max Lezano</span>
+            </div>
+            <div class="derechos_footer"> Tarantino. Todos los derechos reservados.</div>
+          </div>
+        </div>
+      </footer>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+      crossorigin="anonymous">
+    </script>
+    <script src="../script/moviePage.js"></script>
+  </body>
+</html>

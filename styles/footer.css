@@ -1,119 +1,116 @@
-@font-face{
-  font-family: 'Another Danger';
+/* estilo footer */
+@font-face {
+  font-family: "Another Danger";
   src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
 }
-.logoStyle{
-  font-family:'Another Danger';
-  font-size: calc(1.5rem + 10vw);
-  margin-bottom: 2rem;
-  color: white;
-}
-
-.footerMovie{
-  background-color:#1F1110 ;
-  padding-top: 2.2em;
-  padding-bottom: 4em;
-}
-
-.fontADS{
-  font-family: ADSlanted;
-  font-size: 9vw;
-  color: #E6E7E9;
-}
-
-.botonesMedia{
-  justify-content: center;
-  justify-content: space-evenly;
-  margin-top: 4vh;
-}
-
-.btnMedia{
-  background-color: rgb(97, 95, 95);
-}
-
-.nombresDesarrolladores{
-  font-size: 0.8em;
-  padding: 1em;
-  margin: 1em;
-  color: #b4b4b4;
-}
-
-
-.imagenStyle{
-  width: 5em;
-  height: 5em;
-  margin-right: 2em;
-  margin-top: 0;
-  margin-left: 1.5em;
-}
-
-.copyright::before{
-  content: "©";
-}
-
-.copyright{
-  margin-top: 1em;
-  color: #E6E7E9;
-}
-
-.suscripcion{
-  text-decoration-color:#E6E7E9 ;
-}
-
-.suscripcion a {
-  color: #dd6334;
-}
-
-.tarantinoInfo{
-  font-family: 'Mulish', sans-serif;
-  color: #b4b4b4;
-}
-
-.fontDevs{
-  font-family: 'Mulish', sans-serif;
-  color: #E6E7E9;
-  margin-bottom: 1.4rem;
-}
-
-.devsCards {
-  width: 170px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-}
-
-.devsCards p {
-  padding: 0;
-  margin: 0;
-}
-
-.devsCards img {
-  margin: 0;
-}
-
-.devsCards div {
+.footerMovie {
+  position: sticky;
   width: 100%;
-  height: 3rem;
+  height: auto;
+  background-color: #1f1110;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-
-.wrapper {
-  width: 100%;
+.redes_footer {
+  width: 40px;
+  margin: 5px;
+}
+.red_fo {
+  width: 40px;
+  margin: 5px;
+}
+.texto_footer {
+  padding: 3vh;
+  padding-bottom: 0.5vh;
+}
+.logo_footer {
+  font-family: "Another Danger";
+  font-size: calc(1.5rem + 1.5vw);
+  text-align: center;
+}
+.cancelar_footer {
+  padding-left: 43%;
+}
+.text_foo {
+  text-align: center;
+}
+.desarrolladores {
+  text-align: center;
+}
+.img_foo {
+  display: flex;
+  justify-content: space-around;
+}
+.desarro_foo {
+  padding-left: 20px;
+  margin-top: 10px;
+  width: 10%;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around !important;
 }
-
-@media (max-width: 849px) {
-  .wrapper {
-    width: 80%;
-  }
+.img_footer {
+  max-width: 70px;
+  width: 100%;
+  height: 70px;
+  border-radius: 50%;
 }
-@media (max-width: 679px) {
-  .wrapper {
+.span {
+  color: #e6e7e9;
+}
+.derechos_footer {
+  padding-top: 1vh;
+  text-align: center;
+  color: #e6e7e9;
+}
+@media (max-width: 800px) {
+  .footerMovie {
     width: 100%;
+    height: auto;
+    background-color: #1f1110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .redes_footer {
+    margin: 2px;
+  }
+  .texto_footer {
+    padding: 0 5px 0 0;
+  }
+  .logo_footer {
+    font-family: "Another Danger";
+    font-size: calc(1.5rem + 0.5vw);
+    text-align: center;
+  }
+  .cancelar_footer {
+    padding-left: 90px;
+    font-size: 12px;
+  }
+  .text_foo {
+    font-size: 15px;
+  }
+  .desarrolladores {
+    font-size: 10px;
+  }
+  .desarro_foo {
+    width: 70px;
+  }
+  .img_footer {
+    width: 100%;
+    height: auto;
+  }
+  .derechos_footer {
+    font-size: 15px;
+  }
+  .redes_footer {
+    width: 20px;
+    margin: 2px;
+  }
+  .red_fo {
+    width: 20px;
+    margin: 2px;
   }
 }
