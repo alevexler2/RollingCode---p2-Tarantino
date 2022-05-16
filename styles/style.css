@@ -208,3 +208,67 @@ body{
   font-size: 14px;
   line-height:20px;
 }
+/* estilo de boton peliculas */
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  background: rgb(148,18,5);
+  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(143, 5, 5, 0.95) 70%);
+  height: 100vh;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top:90px ;
+}
+.our_team{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team_member{
+  width: 250px;
+  margin:15px;
+  background-color: #400202;
+  padding: 20px 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.member_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.foto_member{
+  max-width: 200px;
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.nom_somos{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0;
+}
+.nom_somos :hover{
+  transition: all 100ms !important;
+  font-size: 1.1em;
+  color: #F2BB13;
+}
+.edad{
+  font-size: 10px;
+}
+.info_somos{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height:20px;
+}

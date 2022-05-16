@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>categorias</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <nav class="padre">
+        <div class="hijo_1">
+          <h1 class="logo-tarantino logo_somos">TARANTINO</h1>
+        </div>
+        <div class="hijo_2">
+          <a href="../pages/homepage.html" class="menu_link">INICIO</a>
+        </div>
+        <div class="hijo_2">
+          <a href="../pages/categorias.html" class="menu_link">PELICULAS</a>
+        </div>
+        <div class="hijo_2">
+          <form class="d-flex menu_item">
+            <input
+              class="form-control rounded-pill form_buscar"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Buscar"
+            />
+            <img src="../img/lupa.svg" alt="lupa" class="menu_img" id="search" />
+          </form>
+        </div>
+        <div class="dropdown hijo_2">
+          <li
+            class="text-decoration-none menu_item"
+            type="button"
+            id="dropdownPeliculas"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+        <img src="../img/user.svg" alt="user" class="menu_img">
+          </li>
+          <ul
+            class="dropdown-menu text-decoration-none menu_nesting"
+            aria-labelledby="dropdownPeliculas"
+          >
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link_inside">AYUDA</a>
+            </li>
+            <li class="menu_inside">
+              <a href="../pages/admin.html" class="menu_link menu_link_inside">ADMINISTRADOR</a>
+            </li>
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link_inside">CERRAR SESION</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown hijo_2 hijo_3">
+          <li
+            class="text-decoration-none menu_item"
+            type="button"
+            id="dropdownPeliculas"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="../img/menu.svg" alt="menu" class="menu_img" />
+          </li>
+          <ul
+            class="dropdown-menu text-decoration-none menu_nesting"
+            aria-labelledby="dropdownPeliculas"
+          >
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link_inside">BUSCAR</a>
+            </li>
+            <li class="menu_inside">
+              <a href="../pages/categorias.html" class="menu_link menu_link_inside">PELICULAS</a>
+            </li>
+            <li class="menu_inside">
+              <a href="#" class="menu_link menu_link_inside">ADMINISTRADOR</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="wrapper">
+        <div class="our_team">
+						<div class="team_member">
+							<div class="member_img">
+								<img src="../img/Django.jpg" alt="Django" class="foto_member">
+							</div>
+							<h3 class="nom_somos text-white">Django sin cadenas</h3>
+							<p class="info_somos text-white"> 
+                Un antiguo esclavo une sus fuerzas con un cazador y ayuda a cazar a los criminales más buscados del Sur.
+							</p>
+						</div>
+						<div class="team_member">
+							<div class="member_img">
+								<img src="../img/Kill Bill.jpg" alt="Kill Bill" class="foto_member">
+							</div>
+							<h3 class="nom_somos text-white">Kill Bill</h3>
+							<p class="info_somos text-white">
+                Mamba Negra es una asesina que, el día de su boda, es atacada por los miembros de la banda de su jefe, Bill.
+							</p>
+						</div>
+						<div class="team_member">
+							<div class="member_img">
+								<img src="../img/Reservoir Dogs.jpg" alt="Perros de la calle" class="foto_member">
+							</div>
+							<h3 class="nom_somos text-white">Perros de la calle</h3>
+							<p class="info_somos text-white"> 
+                Seis criminales profesionales son contratados para robar en un almacén de diamantes, pero la policía aparece.
+							</p>
+						</div>
+						<div class="team_member">
+							<div class="member_img">
+								<img src="../img/Los odiosos ocho.jpg" alt="Los ocho mas odiados" class="foto_member">
+							</div>
+							<h3 class="nom_somos text-white">Los ocho más odiados</h3>
+							<p class="info_somos text-white">
+                El cazarrecompensas John viaja con su fugitiva Daisy, donde entregará a la mujer a la justicia.
+							</p>
+						</div>
+          <div class="team_member">
+            <div class="member_img">
+              <img src="../img/bastardos.jpg" alt="Malditos bastardos" class="foto_member">
+            </div>
+            <h3 class="nom_somos text-white">Malditos bastardos</h3>
+            <p class="info_somos text-white">
+              La vida de un boxeador, dos sicarios, la esposa de un gánster y dos bandidos se entrelaza en una historia de violencia y redención.
+            </p>
+          </div>
+          <div class="team_member">
+            <div class="member_img">
+              <img src="../img/resizer.jpg" alt="Bastardos sin gloria" class="foto_member">
+            </div>
+            <h3 class="nom_somos text-white">Tiempos violentos</h3>
+            <p class="info_somos text-white">
+              La vida de un boxeador, dos sicarios, la esposa de un gánster y dos bandidos se entrelaza en una historia de violencia y redención.</p>
+          </div>
+          <div class="team_member">
+            <div class="member_img">
+              <img src="../img/A_prueba_de_muerte-587849187-large.jpg" alt="Tomas" class="foto_member">
+            </div>
+            <h3 class="nom_somos text-white">A prueba de muerte</h3>
+            <p class="info_somos text-white">
+              Mike es un especialista de cine retirado que sólo se siente completo cuando se encuentra tras el volante de su coche, un Dodge con una calavera pintada en el capó. Juntos recorren las carreteras en busca de mujeres jóvenes a las que poder matar.
+            </p>
+          </div>
+          <div class="team_member">
+            <div class="member_img">
+              <img src="../img/jackie.jpg" alt="Matias" class="foto_member">
+            </div>
+            <h3 class="nom_somos text-white">Jackie Brown</h3>
+            <p class="info_somos text-white">
+            Jackie incrementa su sueldo de azafata haciendo de correo para el mafioso Ordell Robbie, hasta que un agente de aduanas y un policía la atrapan.
+            </p>
+          </div>
+        </div>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+</body>
+</html>
