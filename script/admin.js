@@ -1,6 +1,7 @@
 const btnPost = document.querySelector("#btnPost");
 const trBody = document.querySelector("#trBody");
 const urlMovies = "http://localhost:3000/movies";
+const urlUsers = "http://localhost:3000/users";
 const checkbox = document.querySelector("#checkbox");
 
 btnPost.addEventListener("click",()=>{
@@ -66,7 +67,7 @@ fetch(urlMovies)
                     <div class="container px-0 d-flex justify-content-center modal-content border-0 bgColorTarantino bgTarantino addMovieModal">
                       <button type="button" class="btn-close btn-close-white align-self-end pe-5 my-3" data-bs-dismiss="modal" aria-label="Close"></button>
                       <div class="container justify-content-center px-5">
-                        <input type="text" class="form-control my-1" placeholder="title" id="editTitleMovie">
+                        <input type="text" class="form-control my-1" placeholder="title" id="editTitleMovie" value="">
                         <input type="text" class="form-control my-1" placeholder="year" id="editYearMovie">
                         <input type="text" class="form-control my-1" placeholder="rated" id="editRatedMovie">
                         <input type="text" class="form-control my-1" placeholder="Runtime" id="editRuntimeMovie">
@@ -111,8 +112,27 @@ fetch(urlMovies)
 let btnId;
 const getIdBtn = (e)=>{
   btnId = e;
+  fetch(`${urlMovies}/${btnId}`)
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector("#editTitleMovie").value = data.title
+      document.querySelector("#editYearMovie").value = data.year
+      document.querySelector("#editRatedMovie").value = data.rated
+      document.querySelector("#editRuntimeMovie").value = data.runtime
+      document.querySelector("#editDirectorMovie").value = data.director
+      document.querySelector("#editWriterMovie").value = data.writer
+      document.querySelector("#editActorsMovie").value = data.actors
+      document.querySelector("#editCategoryMovie").value = data.category
+      document.querySelector("#editLanguageMovie").value = data.language
+      document.querySelector("#editSynopsisMovie").value = data.synopsis
+      document.querySelector("#editImdbRatingMovie").value = data.imdbRating
+      document.querySelector("#editImageMovie").value = data.image
+      document.querySelector("#editUrlEspañolMovie").value = data.urlEspañol
+      document.querySelector("#editUrlInglesMovie").value = data.urlIngles
+    })
 }
 const btnPut = ()=>{
+  
   const editCheckbox = document.querySelector("#editCheckbox");
   document.querySelector("#editCheckbox").checked? editCheckbox.value = "publicada" : editCheckbox.value = "No publicada";
   if(document.querySelector("#editTitleMovie").value == "" || document.querySelector("#editYearMovie").value == "" 
@@ -201,6 +221,15 @@ window.addEventListener("load",()=>{
     .then(data=>data.forEach((e)=>{
       e.favorite == true? document.getElementById(`${Number(200)+e.id}`).setAttribute("checked",""):document.getElementById(`${Number(200)+e.id}`).removeAttribute("checked","");
     }))
+  fetch(`${urlUsers}/1`)
+    .then(response => response.json())
+    .then(data => {
+     let user = data;
+     localStorage.getItem("correo") == undefined? window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/index.html": "";
+     localStorage.getItem("correo") != user.correo? window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/index.html": "";
+  
+
+    })
 })
 
 const volverInicio = () => {

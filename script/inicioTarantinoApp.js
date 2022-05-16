@@ -85,5 +85,14 @@ setTimeout(() => {
 }, 2050);
 
 window.addEventListener("load", ()=>{
-  localStorage.clear();
+  fetch(urlUsers)
+    .then(response => response.json())
+    .then(data => {
+      let passwords = data.map(e => {return e.contraseña})
+      let pass = passwords.find(e =>{return e == localStorage.getItem("contraseña")})
+      if(pass != undefined && pass == localStorage.getItem("contraseña")){
+        window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/pages/homepage.html"
+      }
+      
+    })
 })

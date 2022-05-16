@@ -1,6 +1,7 @@
-const urlMovies = "http://localhost:3000/movies"
+const urlMovies = "http://localhost:3000/movies";
 const urlUsers = "http://localhost:3000/users";
-const linkAdmin = document.querySelector("#adminLink")
+const linkAdmin = document.querySelector("#adminLink");
+const btnClose = document.querySelector("#btnClose");
 inputSearch.addEventListener("keydown",()=>{
   fetch(urlMovies)
     .then(response => response.json())
@@ -18,7 +19,9 @@ window.addEventListener("load", ()=>{
     .then(data=>{
       let correos = data.map(e=>{return e.correo})
       let correo = correos.find(e=>{return e == localStorage.getItem("correo")})
-      localStorage.getItem("correo") == null? window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/index.html": "";
+      if(localStorage.getItem("correo") == null || correo != localStorage.getItem("correo")){
+        window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/index.html"
+      }
     })
   fetch(`${urlUsers}/1`)
     .then(response => response.json())
@@ -30,6 +33,10 @@ window.addEventListener("load", ()=>{
     })  
 })
 
+btnClose.addEventListener("click",()=>{
+  localStorage.clear();
+  window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/index.html";
+})
 
 /*-----------------------------------------
 */ 
