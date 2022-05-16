@@ -18,7 +18,7 @@ window.addEventListener("load", ()=>{
     .then(data=>{
       let correos = data.map(e=>{return e.correo})
       let correo = correos.find(e=>{return e == localStorage.getItem("correo")})
-      correo != localStorage.getItem("correo")? window.location = "http://127.0.0.1:5501/index.html": "";
+      localStorage.getItem("correo") == null? window.location = "http://127.0.0.1:5500/index.html": "";
     })
   fetch(`${urlUsers}/1`)
     .then(response => response.json())
