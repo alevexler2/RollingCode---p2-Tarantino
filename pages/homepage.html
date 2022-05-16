@@ -11,117 +11,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Tarantino</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/homepageStyles.css"/>
   </head>
 </head>
 <body>
+  <!-- header -->
   <header>
-    <nav class="padre  mt-0">
-      <div class="hijo_1">
-        <h1 class="logo-tarantino">TARANTINO</h1>
-      </div>
-      <div class="hijo_2">
-        <a href="./admin.html" class="menu_link d-none" id="adminLink">ADMINISTRADOR</a>
-      </div>
-      <div class="hijo_2">
-        <a href="./homepage.html" class="menu_link">INICIO</a>
-      </div>
-      <div class="dropdown hijo_2">
-        <li class="text-decoration-none menu_item" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">PELICULAS</li>
-        <ul class="dropdown-menu text-decoration-none menu_nesting" aria-labelledby="dropdownPeliculas">
-          <li class="menu_inside">
-            <a href="./404.html" class="menu_link menu_link_inside" id="accion">Accion</a>
-          </li>
-          <li class="menu_inside">
-            <a href="./404.html" class="menu_link menu_link_inside" id="comedia">Comedia</a>
-          </li>
-          <li class="menu_inside">
-            <a href="./404.html" class="menu_link menu_link_inside" id="drama">Drama</a>
-          </li>
-          <li class="menu_inside">
-            <a href="./404.html" class="menu_link menu_link_inside" id="ficcion">Ficcion</a>
-          </li>
-          <li class="menu_inside">
-            <a href="./404.html" class="menu_link menu_link_inside" id="romance">Romance</a>
-          </li>
-          <li class="menu_inside">
-            <a href="./404.html" class="menu_link menu_link_inside" id="terror">Terror</a>
-          </li>
-        </ul>
-      </div>
-      <div class="hijo_2">
-        <a href="./404.html" class="menu_link">SERIES</a>
-      </div>
-      <div class="hijo_2">
-        <form class="d-flex menu_item">
-          <input type="search" placeholder="Buscar" aria-label="Buscar" id="inputSearch" class="form-control rounded-pill form_buscar"/>
-          <img src="../img/lupa.svg" alt="lupa" class="menu_img" id="search" />
-        </form>
-      </div>
-      <div class="dropdown hijo_2">
-        <li class="text-decoration-none menu_item" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="../img/user.svg" alt="user" class="menu_img">
-        </li>
-        <ul class="dropdown-menu text-decoration-none menu_nesting" aria-labelledby="dropdownPeliculas">
-          <li class="menu_inside">
-            <a href="./404.html" class="menu_link menu_link_inside">AYUDA</a>
-          </li>
-          <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside" id="btnClose">CERRAR SESION</a>
-          </li>
-        </ul>
-      </div>
-      <div class="dropdown hijo_2 hijo_3">
-        <li class="text-decoration-none menu_item" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="../img/menu.svg" alt="menu" class="menu_img" />
-        </li>
-        <ul class="dropdown-menu text-decoration-none menu_nesting" aria-labelledby="dropdownPeliculas">
-          <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside">BUSCAR</a>
-          </li>
-          <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside">SERIES</a>
-          </li>
-          <li class="menu_inside">
-            <a href="#" class="menu_link menu_link_inside">PELICULAS</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid py-2 navFix">
+      <div class="container-fluid">
+        <div class="navbar-brand container d-flex justify-content-start mx-0 col-2">
+          <h1 class="text-white text-decoration-none mb-0 logo-tarantino">TARANTINO</h1>
+        </div>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 container d-flex justify-content-end mx-0">
+            <div class="nav-item p-2 pe-4">
+              <a href="./admin.html" class="text-decoration-none elementNav" id="adminLink">ADMINISTRADOR</a>
+            </div>
+            <div class="nav-item p-2 pe-4">
+              <a href="./homepage.html" class="text-decoration-none elementNav">INICIO</a>
+            </div>
+            <div class="nav-item p-2 pe-4 dropdown">
+              <li class="text-decoration-none elementNav" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">PELICULAS</li>
+              <ul class="dropdown-menu menu_nesting" aria-labelledby="dropdownPeliculas">
+                <li class="m-1 p-2">
+                  <a href="./404.html" class="text-decoration-none elementNav" id="accion">Acción</a>
+                </li>
+                <li class="m-1 p-2">
+                  <a href="./404.html" class="text-decoration-none elementNav" id="comedia">Comedia</a>
+                </li>
+                <li class="m-1 p-2">
+                  <a href="./404.html" class="text-decoration-none elementNav" id="drama">Drama</a>
+                </li>
+                <li class="m-1 p-2">
+                  <a href="./404.html" class="text-decoration-none elementNav" id="ficcion">Ficción</a>
+                </li>
+                <li class="m-1 p-2">
+                  <a href="./404.html" class="text-decoration-none elementNav" id="romance">Romance</a>
+                </li>
+                <li class="m-1 p-2">
+                  <a href="./404.html" class="text-decoration-none elementNav" id="terror">Terror</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+          <form class="container d-flex mx-0 px-0 py-2 me-3 col-10 col-lg-2 elementNav">
+            <input type="search" placeholder="Buscar" aria-label="Buscar" id="inputSearch" class="form-control rounded-pill form_buscar"/>
+          </form>
+          <div class="dropdown dpy-2">
+            <li type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../img/user.svg" alt="user" class="menu_img">
+            </li>
+            <ul class="dropdown-menu dropdown-menu-end menu_nesting" aria-labelledby="dropdownPeliculas">
+              <li class="m-1 p-2">
+                <a href="./404.html" class="text-decoration-none elementNav">Ayuda</a>
+              </li>
+              <li class="m-1 p-2">
+                <a href="#" class="text-decoration-none elementNav" id="btnClose">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
-
-			<div class="container-fluid col-12 col-lg-11  d-flex justify-content-center moviePri" id="bgFavoriteMovie">
-        <div class="row container-fluid boxMovie">
-						<button class="btn btn-primary  rounded col-2 btnTarantino">Reproducir</button>
-						<button class="btn btn-secondary rounded col-2 btnTarantino">Infomación</button>
+  <!-- fin del header -->
+  <!-- Main -->
+  <main>
+    <section>
+      <div class="container d-flex justify-content-center moviePri" id="bgFavoriteMovie">
+        <div class="container-fluid d-flex align-items-end mb-4 px-0">
+          <button class="btn mx-1 py-2 col-4 col-lg-2 border-0 btnTarantino">Reproducir</button>
+          <button class="btn mx-1 py-2 col-4 col-lg-2 border-0 btn-secondary">Infomación</button>
         </div>
       </div>
-			<div class="container-fluid ">
-				<div class="row d-flex justify-content-between">
-					<div class="flip-card zoom container container mx-4 bg-danger d-flex justify-content-center align-items-center col-2">
-						<div class="flip-card-inner">
-						  <div class="flip-card-front col-10 ">
-							<img class="col-10" src="../img/9.png" alt="">
-						  </div>
-						  <div class="flip-card-back">
-							  <img class="col-10 " src="../img/8.png" alt="">
-						  </div>
-						</div>
-					  </div>
-					<div class="container  d-flex justify-content-center align-items-center col-2 zoom">
-						<img class="col-12 p-0 rounded-3" src="https://w0.peakpx.com/wallpaper/590/843/HD-wallpaper-quentin-tarantino-movies-tarantino-movies.jpg" alt="">
-					</div>
-					<div class="container  d-flex justify-content-center align-items-center col-2 zoom">
-						<img class="col-12 p-0 rounded-3" src="https://w0.peakpx.com/wallpaper/590/843/HD-wallpaper-quentin-tarantino-movies-tarantino-movies.jpg" alt="">
-					</div>
-					<div class="container  d-flex justify-content-center align-items-center col-2 zoom">
-						<img class="col-12 p-0 rounded-3" src="https://w0.peakpx.com/wallpaper/590/843/HD-wallpaper-quentin-tarantino-movies-tarantino-movies.jpg" alt="">
-					</div>
-				</div>
-			</div>
-			 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+    </section>
+    <section>
+      <div class="container px-0 mt-4">
+        <div class="row">
+          <div class="container col-3 cardCategory">
+            <a href="./404.html"><img class="rounded w-100" src="../img/6.png" alt=""></a>
+          </div>
+          <div class="container col-3 cardCategory">
+            <a href="./404.html"><img class="rounded w-100" src="../img/6.png" alt=""></a>
+          </div>
+          <div class="container col-3 cardCategory">
+            <a href="./404.html"><img class="rounded w-100" src="../img/6.png" alt=""></a>
+          </div>
+          <div class="container col-3 cardCategory">
+            <a href="./404.html"><img class="rounded w-100" src="../img/6.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container px-0">
+      <h4 class="mt-4 text-white">Recomendación para ti</h4>
+      <div class="mt-3 contCarrusel">
+        <div class="d-flex boxCarrusel" id="carrusel">
+          <!-- acá se cargan las cards de manera dinámica -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- fin del Main -->
+  <!-- footer -->
+  <footer class="footerMovie">
+    <div class="redes_footer">
+      <img src="../img/what.svg" alt="whatsapp" class="red_fo"/>
+      <img src="../img/insta.svg" alt="instragam" class="red_fo"/>
+      <img src="../img/face.svg" alt="facebook" class="red_fo"/>
+      <img src="../img/twitter.svg" alt="twitter" class="red_fo"/>
+    </div>
+    <div class="texto_footer">
+      <h1 class="logo_footer text-white">TARANTINO</h1>
+      <a href="#" class="cancelar_footer text-white text-decoration-none">Cancelas subscripcion</a
+      >
+      <h4 class="text_foo text-white">
+        Tarantino es un servicio por subscripcion de pago, su contenido esta
+        sujeto a disponibilidad. El servicio Tarantino es comercializado por:
+      </h4>
+      <div class="desarrolladores text-white"><i class="desarrolladores">desarrolladores</i></div>
+      <div class="row img_foo">
+        <div class="desarro_foo">
+          <img
+            src="../img/alejandro.jpeg"
+            alt="Alejandro"
+            class="img_footer"
+          />
+          <span class="text-white">Ale Vexler</span>
+        </div>
+        <div class="desarro_foo">
+          <img src="../img/matias.jpeg" alt="Matias" class="img_footer" />
+          <span class="text-white">Matias Briseño</span>
+        </div>
+        <div class="desarro_foo">
+          <img src="../img/pia.jpeg" alt="Pia" class="img_footer" />
+          <span class="text-white">Pia Blanco</span>
+        </div>
+        <div class="desarro_foo">
+          <img src="../img/tomas.jpeg" alt="Tomas" class="img_footer" />
+          <span class="text-white">Tomas Molina</span>
+        </div>
+        <div class="desarro_foo">
+          <img src="../img/maxi.jpeg" alt="Maxi" class="img_footer" />
+          <span class="text-white">Max Lezano</span>
+        </div>
+        <div class="derechos_footer"> Tarantino. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+  </script>
   <script src="../script/homePage.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>

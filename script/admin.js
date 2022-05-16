@@ -204,5 +204,5 @@ window.addEventListener("load",()=>{
 })
 
 const volverInicio = () => {
-  window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/pages/homepage.html";
+  window.location = href="./homepage.html";
 }

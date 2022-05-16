@@ -1,162 +1,105 @@
 @font-face {
-    font-family: 'Another Danger';
-    src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
-  }
-body{
-    background: rgb(148,18,5);
-    background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
-    
+  font-family: "Another Danger";
+  src: url(../fonts/Another\ Danger\ Slanted\ -\ Demo.otf);
 }
-.moviePri{
+body {
+  background: rgb(148,18,5);
+  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(64,2,2,0.95) 70%);
+}
+.moviePri {
   top: 0;
-  margin-top: 90px;
-	height: max-content;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top center;
+  margin-top: calc(1.4rem + 4.5vh);
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 }
-.boxMovie{
-	margin-top: 40%;
+.btnTarantino {
+  background-color: #d94711;
+  color: #e6e7e9;
+  border: 0px;
+  border-radius: 5px;
+  font-family: "Mulish 500";
 }
-
-.btnTarantino{
-    background-color:#D94711 ;
-    color: #E6E7E9;
-    border: 0px;
-    border-radius: 5px;
-    font-family: "Mulish 500";
-  }
-  .btnTarantino:hover {
-    color: #fff;
-    background-color: #400202;
-  }
-/* ---- ----- ----- zoom card ----- ----- ----- */
-.card.zoom{
-
-	padding: 0px;
-	transition: transform .2s; /* Animation */
-	width: 375px;
-	height: 100px;
-	margin: 0 auto;
-  }
-  .zoom:hover {
-	transform: scale(1.5);
-    transition-duration: 500ms;
-     /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-  .zoom:hover .card-body{
-	  visibility: visible;
-  }
-  .card-body{
-	  visibility: hidden;
-  }
-
-  /*---------------------navbar------------*/
-  .logo-tarantino{
-    font-family:'Another Danger';
-    color: #E6E7E9;
-    text-align: center;
-  }
-
-  .padre{
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:#1F1110 ;
-    width: 100%;
-    height: 90px;
-    position: fixed;
-    z-index: 100;
+.btnTarantino:hover {
+  color: #fff;
+  background-color: #400202;
 }
-.hijo_1{
-    color: #E6E7E9;
-    margin: 15px;
-    margin-right: 20%;
-    font-family: fantasy;
-    font-size: xx-large;
+/*---------------------navbar------------*/
+.logo-tarantino {
+  font-family: "Another Danger";
 }
-.hijo_2{
-    color: #E6E7E9;
-    margin: 15px;
-    font-family: fantasy;
-    font-size: large;
+.navFix {
+  top: 0;
+  background-color: #1f1110;
+  position: fixed;
+  z-index: 1;
 }
-.hijo_2 :hover{
-    transition: all 100ms;
-    font-size: 1.1em;
-    color: #F2BB13;
+.elementNav{
+  color: white;
 }
-.menu_img{
-    width: 50px;
+.elementNav:hover {
+  transition: all 100ms;
+  font-size: 1.1em;
+  color: #f2bb13;
 }
-.menu_link{
-    text-decoration: none;
-    color: #E6E7E9;
+.menu_img {
+  width: 50px;
 }
-.menu_nesting{
-    background-color: #1F1110;
-    transition: all 600ms;
+.menu_nesting {
+  transition: all 600ms;
 }
-.menu_inside{
-    background-color: #1F1110;
-    margin: 10px;
+.menu_nesting.show {
+  background-color: #1f1110;
 }
-.menu_nesting.show{
-    background-color: #1F1110;
+/* main cards */
+.cardCategory:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
 }
-.hijo_3{
-    margin: 5px;
-    display: none;
-    transition: 200ms;
+/* carrusel */
+.imgCardMovie{
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
 }
-.menu_inside{
- padding: 20px;
+.cardMovie:hover{
+  -webkit-box-shadow: 0px 10px 20px -20px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 10px 20px -20px rgba(0, 0, 0, 1);
+  box-shadow: 0px 10px 20px -20px rgba(0, 0, 0, 1);
+  transform: scale(1.1);
+  transform-origin: top center;
+  transition: 0.3s;
+  z-index: 1;
 }
-@media (max-width:800px) {
-    .hijo_2{
-        display: none;
-    }
-    .hijo_3{
-        display: flex;
-        }
+.boxCarrusel{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: calc(1rem + 2vw);
 }
-
-
-
-/*-------------------------------------------*/
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
-	backface-visibility: hidden;
-  }
-   
-  /* Style the back side */
-  .flip-card-back {
-	transform: rotateY(180deg);
-  }
-
-  .flip-card.zoom{
-	transition: transform .2s; /* Animation */
-  }
-  .zoom:hover {
-	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+.cardMovie {
+  -webkit-box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 1);
+  box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 1);
+  position: relative;
+}
+.desCardMovie{
+  display: none;
+  position: absolute;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.10127801120448177) 100%);
+}
+.cardMovie:hover .desCardMovie {
+  display: block;
+  border-radius: 5px;
+}
+.btnPlay{
+  height: 100%;
+  width: 100%;
+}
+.iconPlay{
+  width: 30%;
+}

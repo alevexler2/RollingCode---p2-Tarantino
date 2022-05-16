@@ -37,7 +37,7 @@ btn.addEventListener("click", () => {
         },
       })
       .then(()=>{
-        window.location = "http://127.0.0.1:5500/pages/addAcc.html";
+        window.location = href="./addAcc.html";
       })
       .catch(()=>{
         window.location = 404
