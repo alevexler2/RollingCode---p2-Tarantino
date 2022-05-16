@@ -35,7 +35,7 @@ window.addEventListener("load", ()=>{
 
 btnClose.addEventListener("click",()=>{
   localStorage.clear();
-  window.location = "http://127.0.0.1:5500/RollingCode---p2-Tarantino/index.html";
+  window.location = href="../index.html";
 })
 
 /*-----------------------------------------*/ 
