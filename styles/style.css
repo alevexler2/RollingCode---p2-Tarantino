@@ -70,3 +70,141 @@ body{
 .txtGris{
   color: rgb(170, 170, 170);
 }
+/* estilo navbar */
+.padre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#1F1110 ;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  z-index: 100;
+}
+.hijo_1{
+  color: #E6E7E9;
+  margin: 15px;
+  margin-right: 20%;
+  font-family: fantasy;
+  font-size: xx-large;
+}
+.hijo_2{
+  color: #E6E7E9;
+  margin: 15px;
+  font-family: fantasy;
+  font-size: large;
+}
+.hijo_2 :hover{
+  transition: all 100ms;
+  font-size: 1.1em;
+  color: #F2BB13;
+}
+.menu_img{
+  width: 50px;
+}
+.menu_link{
+  text-decoration: none;
+  color: #E6E7E9;
+}
+.menu_nesting{
+  background-color: #1F1110;
+  transition: all 600ms;
+}
+.menu_inside{
+  background-color: #1F1110;
+  margin: 10px;
+}
+.menu_nesting.show{
+  background-color: #1F1110;
+}
+.hijo_3{
+  margin: 5px;
+  display: none;
+  transition: 200ms;
+}
+.menu_inside{
+padding: 20px;
+}
+@media (max-width:800px) {
+  .hijo_2{
+      display: none;
+  }
+  .hijo_3{
+      display: flex;
+      }
+}
+/* estilo quienes somos */
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  background: rgb(148,18,5);
+  background: linear-gradient(0deg, rgba(148,18,5,0.95) 0%, rgba(143, 5, 5, 0.95) 70%);
+  height: 100vh;
+}
+.logo_somos{
+  font-family:'Another Danger';
+  font-size: calc(0.5rem + 4vw);
+  color: #E6E7E9;
+  text-align: center;
+}
+.padre_2{
+  position: relative;
+  top: 100px;
+}
+.logo_somos_2{
+  padding-top: 10px;
+  text-align: center;
+}
+.text_explicativo{
+  margin: 20px;
+  color: #E6E7E9;
+}
+.wrapper{
+  position: absolute;
+  text-align: center;
+  margin-top:90px ;
+}
+.our_team{
+  display: flex;
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team_member{
+  width: 250px;
+  margin: 5px;
+  background-color: #400202;
+  padding: 20px 10px;
+}
+.member_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.foto_member{
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+}
+.nom_somos{
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0;
+}
+.edad{
+  font-size: 10px;
+}
+.info_somos{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height:20px;
+}
