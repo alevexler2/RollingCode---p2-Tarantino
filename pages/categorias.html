@@ -14,81 +14,86 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <nav class="padre">
-        <div class="hijo_1">
-          <h1 class="logo-tarantino logo_somos">TARANTINO</h1>
-        </div>
-        <div class="hijo_2">
-          <a href="../pages/homepage.html" class="menu_link">INICIO</a>
-        </div>
-        <div class="hijo_2">
-          <a href="../pages/categorias.html" class="menu_link">PELICULAS</a>
-        </div>
-        <div class="hijo_2">
-          <form class="d-flex menu_item">
-            <input
-              class="form-control rounded-pill form_buscar"
-              type="search"
-              placeholder="Buscar"
-              aria-label="Buscar"
-            />
-            <img src="../img/lupa.svg" alt="lupa" class="menu_img" id="search" />
-          </form>
-        </div>
-        <div class="dropdown hijo_2">
-          <li
-            class="text-decoration-none menu_item"
-            type="button"
-            id="dropdownPeliculas"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-        <img src="../img/user.svg" alt="user" class="menu_img">
+  <header>
+    <nav class="padre  mt-0">
+      <div class="hijo_1">
+        <h1 class="logo-tarantino">TARANTINO</h1>
+      </div>
+      <div class="hijo_2">
+        <a href="./admin.html" class="menu_link d-none" id="adminLink">ADMINISTRADOR</a>
+      </div>
+      <div class="hijo_2">
+        <a href="./homepage.html" class="menu_link">INICIO</a>
+      </div>
+      <div class="dropdown hijo_2">
+        <li class="text-decoration-none menu_item" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">PELICULAS</li>
+        <ul class="dropdown-menu text-decoration-none menu_nesting" aria-labelledby="dropdownPeliculas">
+          <li class="menu_inside">
+            <a href="./404.html" class="menu_link menu_link_inside" id="accion">Accion</a>
           </li>
-          <ul
-            class="dropdown-menu text-decoration-none menu_nesting"
-            aria-labelledby="dropdownPeliculas"
-          >
-            <li class="menu_inside">
-              <a href="#" class="menu_link menu_link_inside">AYUDA</a>
-            </li>
-            <li class="menu_inside">
-              <a href="../pages/admin.html" class="menu_link menu_link_inside">ADMINISTRADOR</a>
-            </li>
-            <li class="menu_inside">
-              <a href="#" class="menu_link menu_link_inside">CERRAR SESION</a>
-            </li>
-          </ul>
-        </div>
-        <div class="dropdown hijo_2 hijo_3">
-          <li
-            class="text-decoration-none menu_item"
-            type="button"
-            id="dropdownPeliculas"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img src="../img/menu.svg" alt="menu" class="menu_img" />
+          <li class="menu_inside">
+            <a href="./404.html" class="menu_link menu_link_inside" id="comedia">Comedia</a>
           </li>
-          <ul
-            class="dropdown-menu text-decoration-none menu_nesting"
-            aria-labelledby="dropdownPeliculas"
-          >
-            <li class="menu_inside">
-              <a href="#" class="menu_link menu_link_inside">BUSCAR</a>
-            </li>
-            <li class="menu_inside">
-              <a href="../pages/categorias.html" class="menu_link menu_link_inside">PELICULAS</a>
-            </li>
-            <li class="menu_inside">
-              <a href="#" class="menu_link menu_link_inside">ADMINISTRADOR</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+          <li class="menu_inside">
+            <a href="./404.html" class="menu_link menu_link_inside" id="drama">Drama</a>
+          </li>
+          <li class="menu_inside">
+            <a href="./404.html" class="menu_link menu_link_inside" id="ficcion">Ficcion</a>
+          </li>
+          <li class="menu_inside">
+            <a href="./404.html" class="menu_link menu_link_inside" id="romance">Romance</a>
+          </li>
+          <li class="menu_inside">
+            <a href="./404.html" class="menu_link menu_link_inside" id="terror">Terror</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hijo_2">
+        <a href="./404.html" class="menu_link">SERIES</a>
+      </div>
+      <div class="hijo_2">
+        <form class="d-flex menu_item">
+          <input type="search" placeholder="Buscar" aria-label="Buscar" id="inputSearch" class="form-control rounded-pill form_buscar"/>
+          <img src="../img/lupa.svg" alt="lupa" class="menu_img" id="search" />
+        </form>
+      </div>
+      <div class="dropdown hijo_2">
+        <li class="text-decoration-none menu_item" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="../img/user.svg" alt="user" class="menu_img">
+        </li>
+        <ul class="dropdown-menu text-decoration-none menu_nesting" aria-labelledby="dropdownPeliculas">
+          <li class="menu_inside">
+            <a href="./404.html" class="menu_link menu_link_inside">AYUDA</a>
+          </li>
+          <li class="menu_inside">
+            <a href="#" class="menu_link menu_link_inside" id="btnClose">CERRAR SESION</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown hijo_2 hijo_3">
+        <li class="text-decoration-none menu_item" type="button" id="dropdownPeliculas" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="../img/menu.svg" alt="menu" class="menu_img" />
+        </li>
+        <ul class="dropdown-menu text-decoration-none menu_nesting" aria-labelledby="dropdownPeliculas">
+          <li class="menu_inside">
+            <a href="#" class="menu_link menu_link_inside">BUSCAR</a>
+          </li>
+          <li class="menu_inside">
+            <a href="#" class="menu_link menu_link_inside">SERIES</a>
+          </li>
+          <li class="menu_inside">
+            <a href="#" class="menu_link menu_link_inside">PELICULAS</a>
+          </li>
+          <li class="menu_inside">
+            <a href="#" class="menu_link menu_link_inside">ADMINISTRADOR</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
       <div class="wrapper">
-        <div class="our_team">
-						<div class="team_member">
+        <div class="our_team" id="container">
+						<!-- <div class="team_member">
 							<div class="member_img">
 								<img src="../img/Django.jpg" alt="Django" class="foto_member">
 							</div>
@@ -96,8 +101,8 @@
 							<p class="info_somos text-white"> 
                 Un antiguo esclavo une sus fuerzas con un cazador y ayuda a cazar a los criminales más buscados del Sur.
 							</p>
-						</div>
-						<div class="team_member">
+						</div> -->
+						<!-- <div class="team_member">
 							<div class="member_img">
 								<img src="../img/Kill Bill.jpg" alt="Kill Bill" class="foto_member">
 							</div>
@@ -132,8 +137,8 @@
             <p class="info_somos text-white">
               La vida de un boxeador, dos sicarios, la esposa de un gánster y dos bandidos se entrelaza en una historia de violencia y redención.
             </p>
-          </div>
-          <div class="team_member">
+          </div> -->
+          <!-- <div class="team_member">
             <div class="member_img">
               <img src="../img/resizer.jpg" alt="Bastardos sin gloria" class="foto_member">
             </div>
@@ -158,12 +163,13 @@
             <p class="info_somos text-white">
             Jackie incrementa su sueldo de azafata haciendo de correo para el mafioso Ordell Robbie, hasta que un agente de aduanas y un policía la atrapan.
             </p>
-          </div>
+          </div> -->
         </div>
         <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"
       ></script>
+       <script src="../script/categorias.js"></script>   
 </body>
 </html>

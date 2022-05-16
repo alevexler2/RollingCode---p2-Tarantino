@@ -1,3 +1,4 @@
+const cardContainer = document.querySelector("#container");
 const urlMovies = "http://localhost:3000/movies";
 const urlUsers = "http://localhost:3000/users";
 const linkAdmin = document.querySelector("#adminLink");
@@ -30,17 +31,20 @@ window.addEventListener("load", ()=>{
     })  
 })
 
-
-/*-----------------------------------------
-*/ 
-
-
-window.addEventListener("load", ()=>{
-  const bgFavoriteMovie = document.querySelector("#bgFavoriteMovie");
+window.addEventListener("load", ()=> {
   fetch(urlMovies)
-    .then(response=>response.json())
-    .then(data=>data.forEach(e => {
-      e.favorite == true? bgFavoriteMovie.style.backgroundImage = `url(${e.image})`: "";
+    .then(response => response.json())
+    .then(data => data.forEach(e=>{
+      console.log(e);
+      cardContainer.innerHTML += 
+      `<div class="team_member">
+			   <div class="member_img">
+				   <img src="${e.image}" alt="${e.title}" class="foto_member">
+				 </div>
+				 <h3 class="nom_somos text-white">${e.title}</h3>
+				 <p class="info_somos text-white">${e.synopsis}
+      </div>`
     }))
 })
+
 
